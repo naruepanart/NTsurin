@@ -1,0 +1,70 @@
+<template>
+  <div>
+    <center>
+
+    <form @submit.prevent="onSubmit()">
+    <p>ชื่อจริง : &nbsp;&nbsp;
+    <input type="text" class="form-control input-md" placeholder="จิรายุ" required="" v-model="firstname" size="30"></p>
+    <p>นามสกุล : &nbsp;&nbsp;
+    <input type="text" class="form-control input-md" placeholder="บินทะลุบ้าน" required="" v-model="lastname" size="30"></p>
+    <p>ชั้นประถมศึกษาปีที่ : &nbsp;&nbsp;
+    <input type="text" class="form-control input-md" placeholder="5/1" required="" v-model="classroom" size="20"></p>
+    <p>เลขที่ : &nbsp;&nbsp;
+    <input type="text" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="20"></p>
+    <p>หากจังหวัดสุรินทร์ต้องการเร่งเดินหน้า เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ" หรือ "Smart City" ควรจะพัฒนาอย่างไร ?</p>
+    <a href="https://www.google.co.th/search?q=smart+city&rlz=1C1GCEA_enTH819TH819&oq=smart&aqs=chrome.2.69i57j69i61j69i59j69i61j0l2.5351j0j7&sourceid=chrome&ie=UTF-8">ตัวอย่าง</a>
+    <br><br>
+    <textarea cols="45" rows="15" v-model="text" placeholder="คำตอบ" required=""></textarea><br><br>
+   
+<br>
+
+ <strong>ตรวจสอบข้อมูล</strong>
+ <p>ชื่อจริง : {{ firstname }}</p>
+ <p>นามสกุล : {{ lastname }}</p>
+ <p>ชั้นประถมศึกษาปีที่ : {{ classroom }}</p>
+ <p>เลขที่ : {{ numberclassroom }}</p>
+ <button style="height:40px;width:260px" type="submit">ส่งข้อมูล</button>
+   </form>
+   </center>
+
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      firstname: '',
+      lastname: '',
+      classroom: '',
+      numberclassroom: '',
+      text: ''
+    };
+  },
+    methods: {
+    onSubmit() {
+      //console.log(this.firstname, this.lastname);
+      axios.post("https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool", {
+          firstname: this.firstname,
+          lastname: this.lastname,
+          classroom: this.classroom,
+          numberclassroom: this.numberclassroom,
+          text: this.text
+        })
+        .then(response => {
+          this.firstname = ''
+          this.lastname = ''
+          this.classroom = ''
+          this.numberclassroom = ''
+          this.text = ''
+          location.reload()
+          location.href = "https://surinsmartcity.netlify.com/thanksyou/"
+        });
+    },
+   
+  },
+};
+</script>
+
