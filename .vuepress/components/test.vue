@@ -59,7 +59,7 @@ export default {
           this.numberclassroom = '',
           this.text = '',
           alert('ส่งคำตอบเรียบร้อยแล้ว')
-        )
+        );
     },
    
   },
