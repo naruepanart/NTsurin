@@ -1,7 +1,8 @@
 ---
 navbar: false
+sidebar: false
 home: true
-footer: Copyright © 2018-Present By Smart City
+footer: Copyright © 2018 By Smart City
 ---
 
 <test></test>
