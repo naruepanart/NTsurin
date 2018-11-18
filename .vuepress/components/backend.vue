@@ -1,13 +1,14 @@
 <template>
   <div>  
+    <h1>คำตอบ</h1>
     <ul>จำนวนคนส่ง : {{firstname.length}} คน</ul>
        <tr v-for="firstnames in firstname">
-        <ul>ชั้นประถมศึกษาปีที่ : {{firstnames.classroom}}</ul>
+        <ul>ชั้นประถมศึกษาปีที่ : {{firstnames.classroom}} &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" @click.once="onDelete(firstnames._id)">Delete</button></ul>
         <ul>เลขที่ : {{firstnames.numberclassroom}}</ul>
         <ul>ชื่อจริง : {{firstnames.firstname}}</ul>
         <ul>นามสกุล : {{firstnames.lastname}}</ul>
         <ul>รายละเอียด : <br>{{firstnames.text}}</ul>
-        <ul><button type="button" @click="onDelete(firstnames._id)">Delete</button></ul> 
       </tr>
   </div> 
 </template>
@@ -28,7 +29,7 @@ export default {
     onDelete(id) {
       axios.delete(
         `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool/` + id)
-      this.firstname.splice(index, 1);
+      this.firstname.$remove(firstnames, 1)
     }
   },
   mounted() {
