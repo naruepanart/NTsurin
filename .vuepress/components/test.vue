@@ -11,9 +11,9 @@
     <p>เลขที่ : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="10"></p>
     <hr>
-    <b>หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ?</b>
+    <span style="font-weight:bold;">หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ?</span>
     <p>เช่น ควรจะพัฒนาในด้าน การท่องเที่ยว เพราะ...</p>
-    <textarea cols="35" rows="28" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br>
+    <textarea cols="35" rows="20" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br>
     <a href="https://www.google.co.th/search?q=smart+city&rlz=1C1GCEA_enTH819TH819&oq=smart&aqs=chrome.2.69i57j69i61j69i59j69i61j0l2.5351j0j7&sourceid=chrome&ie=UTF-8">แหล่งสืบค้นข้อมูล</a>
     <br>
     <hr>
@@ -22,7 +22,7 @@
  <p>นามสกุล : {{ lastname }}</p>
  <p>ชั้นประถมศึกษาปีที่ : {{ classroom }}</p>
  <p>เลขที่ : {{ numberclassroom }}</p>
- <button style="height:40px;width:260px" type="submit">ส่งข้อมูล</button>
+ <button style="height:40px;width:300px" type="submit">ส่งข้อมูล</button>
    </form>
    </center>
 
