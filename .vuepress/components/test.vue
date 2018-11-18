@@ -52,14 +52,14 @@ export default {
           numberclassroom: this.numberclassroom,
           text: this.text
         })
-        .then(response => {
-          alert('ส่งคำตอบเรียบร้อยแล้ว');
+        .then(response => 
           this.firstname = '',
           this.lastname = '',
           this.classroom = '',
           this.numberclassroom = '',
-          this.text = ''
-        });
+          this.text = '',
+          alert('ส่งคำตอบเรียบร้อยแล้ว')
+        )
     },
    
   },
