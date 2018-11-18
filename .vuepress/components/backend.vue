@@ -1,5 +1,6 @@
 <template>
   <div>  
+    <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
        <tr v-for="firstnames in firstname">
         <ul>ห้อง : {{firstnames.classroom}}</ul>
         <ul>เลขที่ : {{firstnames.numberclassroom}}</ul>
