@@ -53,13 +53,12 @@ export default {
           text: this.text
         })
         .then(response => {
-          this.firstname = ''
-          this.lastname = ''
-          this.classroom = ''
-          this.numberclassroom = ''
+          alert('ส่งคำตอบเรียบร้อยแล้ว');
+          this.firstname = '',
+          this.lastname = '',
+          this.classroom = '',
+          this.numberclassroom = '',
           this.text = ''
-          location.reload()
-          location.href = "https://surinsmartcity.netlify.com/thanksyou/"
         });
     },
    
