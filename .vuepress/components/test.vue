@@ -10,14 +10,13 @@
     <input type="text" class="form-control input-md" placeholder="5/1" required="" v-model="classroom" size="20"></p>
     <p>เลขที่ : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="20"></p>
-    <p>หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ?</p>
+    <hr>
+    <b>หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ?</b>
+    <p>เช่น ควรจะพัฒนาในด้าน การท่องเที่ยว เพราะ...</p>
+    <textarea cols="30" rows="15" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br>
     <a href="https://www.google.co.th/search?q=smart+city&rlz=1C1GCEA_enTH819TH819&oq=smart&aqs=chrome.2.69i57j69i61j69i59j69i61j0l2.5351j0j7&sourceid=chrome&ie=UTF-8">แหล่งสืบค้นข้อมูล</a>
     <br>
-    <p>เช่น ด้านการ ท่องเที่ยว เพราะ...</p>
-    <textarea cols="45" rows="15" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br><br>
-   
-<br>
-
+    <hr>
  <strong>ตรวจสอบข้อมูลก่อนส่ง</strong>
  <p>ชื่อจริง : {{ firstname }}</p>
  <p>นามสกุล : {{ lastname }}</p>
