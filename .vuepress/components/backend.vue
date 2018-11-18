@@ -1,7 +1,7 @@
 <template>
   <div>  
-    <h1>คำตอบ</h1>
-    <ul>จำนวนคนส่ง : {{firstname.length}} คน</ul>
+    <h3>คำตอบ</h3>
+    <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
        <tr v-for="firstnames in firstname">
         <ul>ชั้นประถมศึกษาปีที่ : {{firstnames.classroom}} &nbsp;&nbsp;&nbsp;&nbsp;
           <button type="button" @click.once="onDelete(firstnames._id)">Delete</button></ul>
