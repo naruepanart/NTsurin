@@ -34,34 +34,37 @@ import axios from "axios";
 export default {
   data() {
     return {
-      firstname: '',
-      lastname: '',
-      classroom: '',
-      numberclassroom: '',
-      text: ''
+      firstname: "",
+      lastname: "",
+      classroom: "",
+      numberclassroom: "",
+      text: ""
     };
   },
-    methods: {
+  methods: {
     onSubmit() {
       //console.log(this.firstname, this.lastname);
-      axios.post("https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool", {
-          firstname: this.firstname,
-          lastname: this.lastname,
-          classroom: this.classroom,
-          numberclassroom: this.numberclassroom,
-          text: this.text
-        })
-        .then(response => 
-          this.firstname = '',
-          this.lastname = '',
-          this.classroom = '',
-          this.numberclassroom = '',
-          this.text = '',
-          alert('ส่งคำตอบเรียบร้อยแล้ว')
+      axios
+        .post(
+          "https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool",
+          {
+            firstname: this.firstname,
+            lastname: this.lastname,
+            classroom: this.classroom,
+            numberclassroom: this.numberclassroom,
+            text: this.text
+          }
+        )
+        .then(
+          response => (this.firstname = ""),
+          (this.lastname = ""),
+          (this.classroom = ""),
+          (this.numberclassroom = ""),
+          (this.text = ""),
+          alert("ส่งคำตอบเรียบร้อยแล้ว")
         );
-    },
-   
-  },
+    }
+  }
 };
 </script>
 
