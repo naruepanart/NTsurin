@@ -2,11 +2,13 @@
   <div> 
       <center> 
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
-     <th>ชื่อจริง และ นามสกุล</th>
+     <th>ชื่อจริง</th>
+     <th>นามสกุล</th>
       <th>ชั้นประถมศึกษาปีที่</th>
       <th>เลขที่</th>
        <tr v-for="firstnames in firstname">
-         <td>{{firstnames.firstname}} {{firstnames.lastname}}</td> 
+         <td>{{firstnames.firstname}}</td> 
+         <td>{{firstnames.lastname}}</td>
          <td>{{firstnames.classroom}}</td>
          <td>{{firstnames.numberclassroom}}</td>
       </tr>
