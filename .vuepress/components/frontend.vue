@@ -1,7 +1,7 @@
 <template>
     <div>
     <center>
-    <form @submit.prevent="onSubmit">
+    <form @submit.prevent.once="onSubmit">
     <p>ชื่อจริง : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname" size="20"></p>
     <p>นามสกุล : &nbsp;&nbsp;
