@@ -1,6 +1,6 @@
 <template>
   <div>  
-    <h2>คำตอบ</h2>
+    <h2>คำตอบ Smart city</h2>
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
        <tr v-for="firstnames in firstname">
          <p>ชื่อจริง : {{firstnames.firstname}}  <button type="button" @click.once="onDelete(firstnames._id)">Delete</button></p>
