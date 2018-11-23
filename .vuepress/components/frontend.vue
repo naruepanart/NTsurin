@@ -59,6 +59,7 @@ export default {
           this.text = ''
         })
         alert('โพสเรียบร้อยแล้ว'); 
+        location.reload();
     }
   }
 };
