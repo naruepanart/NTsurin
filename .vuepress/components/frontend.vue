@@ -51,14 +51,14 @@ export default {
             text: this.text
           }
         )
-        .then(response => 
+        .then(response => {
           this.firstname = '',
           this.lastname = '',
           this.classroom = '',
           this.numberclassroom = '',
-          this.text = '',
-          alert("ส่งคำตอบเรียบร้อยแล้ว")
-        );
+          this.text = ''
+        })
+        alert('โพสเรียบร้อยแล้ว'); 
     }
   }
 };
