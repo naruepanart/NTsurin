@@ -1,7 +1,7 @@
 <template>
     <div>
     <center>
-    <form @submit.prevent="onSubmit()">
+    <form @submit.prevent="onSubmit">
     <p>ชื่อจริง : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname" size="20"></p>
     <p>นามสกุล : &nbsp;&nbsp;
@@ -12,7 +12,7 @@
     <input type="number" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="10" min="1"></p>
     <hr>
     <p>หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ?</p>
-    <p>เช่น ควรจะพัฒนาในด้าน การท่องเที่ยว เพราะ...</p>
+    <p>เช่น ควรจะพัฒนาในด้านการท่องเที่ยว เพราะ...</p>
     <textarea cols="35" rows="20" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br>
     <a href="https://www.google.co.th/search?q=smart+city&rlz=1C1GCEA_enTH819TH819&oq=smart&aqs=chrome.2.69i57j69i61j69i59j69i61j0l2.5351j0j7&sourceid=chrome&ie=UTF-8">แหล่งค้นหาคำตอบ</a>
     <br><br>
@@ -30,11 +30,11 @@ import axios from "axios";
 export default {
   data() {
     return {
-      firstname: "",
-      lastname: "",
-      classroom: "",
-      numberclassroom: "",
-      text: ""
+      firstname: '',
+      lastname: '',
+      classroom: '',
+      numberclassroom: '',
+      text: ''
     };
   },
   methods: {
@@ -52,11 +52,11 @@ export default {
           }
         )
         .then(response => 
-          this.firstname = "",
-          this.lastname = "",
-          this.classroom = "",
-          this.numberclassroom = "",
-          this.text = "",
+          this.firstname = '',
+          this.lastname = '',
+          this.classroom = '',
+          this.numberclassroom = '',
+          this.text = '',
           alert("ส่งคำตอบเรียบร้อยแล้ว")
         );
     }
