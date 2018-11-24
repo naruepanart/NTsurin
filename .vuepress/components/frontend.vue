@@ -58,8 +58,7 @@ export default {
           this.numberclassroom = '',
           this.text = ''
         })
-        alert('โพสเรียบร้อยแล้ว'); 
-        location.reload();
+        alert('ส่งเรียบร้อยแล้ว');
     }
   }
 };
