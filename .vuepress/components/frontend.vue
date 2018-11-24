@@ -1,7 +1,7 @@
 <template>
     <div>
     <center>
-    <form @submit.prevent.once="onSubmit">
+    <form @submit.prevent="onSubmit">
     <p>ชื่อจริง : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname" size="20"></p>
     <p>นามสกุล : &nbsp;&nbsp;
@@ -11,7 +11,7 @@
     <p>เลขที่ : &nbsp;&nbsp;
     <input type="number" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="10" min="1"></p>
     <hr>
-    <p>หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ? <b>(ให้เลือกตอบคนละ 1 ข้อ)</b></p>
+    <p>หากจังหวัดสุรินทร์กำลังเร่งเดินหน้าพัฒนา เพื่อเข้าสู่ยุค "เมืองอัจฉริยะ (Smart City)" ควรจะพัฒนาด้านใดบ้าง ? <br> <b>(ให้เลือกตอบคนละ 1 ข้อ)</b></p>
     <p>ยกตัวอย่าง</p>
     <p>1.ด้านการขนส่ง</p>
     <p>2.ด้านการจัดการขยะ</p>
