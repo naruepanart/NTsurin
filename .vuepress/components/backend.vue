@@ -2,8 +2,9 @@
   <div>  
     <h2>คำตอบ Smart city</h2>
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
-       <tr v-for="firstnames in firstname">
-         <p>ชื่อจริง : {{firstnames.firstname}}  <button type="button" @click.once="onDelete(firstnames._id)">Delete</button></p>
+       <tr v-for="firstnames, i in firstname">
+         <p>ชื่อจริง : {{firstnames.firstname}}
+           <button v-on:click="onDelete(firstnames._id,i)">Delete</button></p>
         <p>นามสกุล : {{firstnames.lastname}}</p>
         <p>ชั้นประถมศึกษาปีที่ : {{firstnames.classroom}}</p>
         <p>เลขที่ : {{firstnames.numberclassroom}}</p>
@@ -25,12 +26,15 @@ export default {
     };
   },
   methods: {
-    onDelete(id) {
+    onDelete(id,i) {
       axios.delete(
-        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool/` +
-          id
-      );
-      this.firstname.$remove(firstnames, 1);
+        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool/` + id, {
+          method: "DELETE"
+        })
+        .then(() => {
+      this.facebook.splice(i, 1);
+      //this.$delete(this.facebook, index)
+    })
     }
   },
   mounted() {
