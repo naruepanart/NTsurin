@@ -1,15 +1,16 @@
 <template>
   <div>  
-    <h2>คำตอบ Smart city</h2>
-    <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
-       <tr v-for="firstnames, i in firstname">
+    <h3>คำตอบ Smart city</h3>
+    <b>จำนวนคนส่ง : {{firstname.length}} คน</b>
+    <hr>
+       <div v-for="firstnames, i in firstname">
          <p>ชื่อจริง : {{firstnames.firstname}}
            <button v-on:click="onDelete(firstnames._id,i)">Delete</button></p>
         <p>นามสกุล : {{firstnames.lastname}}</p>
         <p>ชั้นประถมศึกษาปีที่ : {{firstnames.classroom}}</p>
         <p>เลขที่ : {{firstnames.numberclassroom}}</p>
         <p>รายละเอียด : <br>{{firstnames.text}}</p>
-      </tr>
+      </div>
   </div> 
 </template>
 
@@ -32,7 +33,7 @@ export default {
           method: "DELETE"
         })
         .then(() => {
-      this.facebook.splice(i, 1);
+      this.firstname.splice(i, 1);
       //this.$delete(this.facebook, index)
     })
     }

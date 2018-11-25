@@ -2,10 +2,10 @@
   <div> 
       <center> 
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
-     <th>ชื่อจริง</th>
-     <th>นามสกุล</th>
-      <th>ชั้นประถมศึกษาปีที่</th>
-      <th>เลขที่</th>
+     <td>ชื่อจริง</td>
+     <td>นามสกุล</td>
+      <td>ชั้นประถมศึกษาปีที่</td>
+      <td>เลขที่</td>
        <tr v-for="firstnames in firstname">
          <td>{{firstnames.firstname}}</td> 
          <td>{{firstnames.lastname}}</td>
