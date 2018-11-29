@@ -52,7 +52,7 @@ export default {
             null: this.numberclassroom = '',
             null: this.text = '',
         })
-        this.firstname.push({link: this.link, picture: this.picture})
+        //this.firstname.push({link: this.link, picture: this.picture})
         alert('ส่งเรียบร้อยแล้ว');
     }
   }
