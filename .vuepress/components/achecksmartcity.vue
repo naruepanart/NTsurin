@@ -31,7 +31,7 @@ export default {
   mounted() {
     axios
       .get(
-        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool/`
+        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/surinsmartcity/`
       )
       .then(response => {
         this.firstname = response.data;

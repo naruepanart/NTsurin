@@ -1,14 +1,12 @@
 <template>
   <div>  
-    <h3>คำตอบ Smart city</h3>
-    <b>จำนวนคนส่ง : {{firstname.length}} คน</b>
+    <p>คำตอบ อาชีพในอนาคต</p>
+    <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
     <hr>
        <div v-for="firstnames, i in firstname">
-         <p>ชื่อจริง : {{firstnames.firstname}}
+         <p>ชื่อ : {{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
            <button v-on:click="onDelete(firstnames._id,i)">Delete</button></p>
-        <p>นามสกุล : {{firstnames.lastname}}</p>
-        <p>ชั้นประถมศึกษาปีที่ : {{firstnames.classroom}}</p>
-        <p>เลขที่ : {{firstnames.numberclassroom}}</p>
+        <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberclassroom}}</p>
         <p>รายละเอียด : <br>{{firstnames.text}}</p>
       </div>
   </div> 
@@ -29,7 +27,7 @@ export default {
   methods: {
     onDelete(id,i) {
       axios.delete(
-        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool/` + id, {
+        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/futurecareer/` + id, {
           method: "DELETE"
         })
         .then(() => {
@@ -41,7 +39,7 @@ export default {
   mounted() {
     axios
       .get(
-        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/primaryschool/`
+        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/futurecareer/`
       )
       .then(response => {
         this.firstname = response.data;

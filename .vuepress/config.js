@@ -1,13 +1,15 @@
 module.exports = {
-  title: 'Surin Smart City',
-  description: 'เมืองอัจฉริยะ ยกระดับคุณภาพชีวิต',
+  title: 'โรงเรียนหนองโตง สุรวิทยาคม',
+  description: 'รวมคำตอบจากนักเรียนรุ่นใหม่',
   base: '/',
   themeConfig: {
-    displayAllHeaders: true,
-    activeHeaderLinks: false,
-    updatePopup: true,
-    sidebar: false,
     search: false,
-    nav: false
+    sidebar: [
+      '/',
+      '/smartcity.md',
+    ],
+    nav: [
+      { text: 'เข้าสู่ระบบ', link: '/login' }
+    ]
   }
 }
