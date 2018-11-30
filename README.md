@@ -4,7 +4,7 @@ title: อาชีพในอนาคต
 
 # อาชีพในอนาคต
 
-<bfuturecareer></bfuturecareer>
+<futurecareer></futurecareer>
 
 
-[ตรวจรายชื่อตนเองหลังจากส่งข้อมูลได้ที่นี่](/check/bfuturecareer.md)
+[ตรวจรายชื่อตนเองหลังจากส่งข้อมูลได้ที่นี่](/check/futurecareer.md)

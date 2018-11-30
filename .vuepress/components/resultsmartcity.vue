@@ -63,3 +63,14 @@ export default {
 </script>
 
 
+<style scoped>
+button{
+  background-color: red;
+  border-radius: 0.25em;
+  border: 1px solid red;
+  color: #ffffff;
+  font-size: 0.8em;
+  padding: 0.6em;
+  width: 20%;
+}
+</style>

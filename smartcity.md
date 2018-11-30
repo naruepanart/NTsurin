@@ -4,7 +4,7 @@ title: สมาร์ทซิตี้
 
 # สมาร์ทซิตี้
 
-<asmartcity></asmartcity>
+<smartcity></smartcity>
 
 
-[ตรวจรายชื่อตนเองหลังจากส่งข้อมูลได้ที่นี่](/check/asmartcity.md)
+[ตรวจรายชื่อตนเองหลังจากส่งข้อมูลได้ที่นี่](/check/smartcity.md)

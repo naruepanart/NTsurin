@@ -2,4 +2,4 @@
 title : Result Smart City
 ---
 
-<aresultsmartcity></aresultsmartcity>
+<resultsmartcity></resultsmartcity>
