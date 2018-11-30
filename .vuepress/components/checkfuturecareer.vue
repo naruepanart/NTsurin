@@ -1,6 +1,6 @@
 <template>
   <div> 
-      <center> 
+ 
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
      <td>ชื่อจริง</td>
      <td>นามสกุล</td>
@@ -12,7 +12,7 @@
          <td>{{firstnames.classroom}}</td>
          <td>{{firstnames.numberclassroom}}</td>
       </tr>
-        </center>
+       
   </div> 
 </template>
 
