@@ -1,5 +1,6 @@
 <template>
-    <div id="login">
+    <div>
+        <td>
           <h1>สำหรับคุณครู</h1>
         <form @submit.prevent="login">
         <p>ชื่อผู้ใช้ : &nbsp;&nbsp;
@@ -8,12 +9,12 @@
         <input type="password" class="form-control input-md" required="" name="password" v-model="input.password" placeholder="รหัสผ่าน" /></p>
         <button style="height:40px;width:300px" type="submit">เข้าสู่ระบบ</button>
         </form>
+        </td>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Login',
         data() {
             return {
                 input: {
@@ -40,3 +41,10 @@
     }
 </script>
 
+
+<style scoped>
+td {
+    border: 1px solid;
+    text-align: center;
+}
+</style>

@@ -15,7 +15,7 @@
     <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname" size="20"></p>
     <p>นามสกุล : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="บินทะลุบ้าน" required="" v-model="lastname" size="20"></p>
-    <p>ชั้นประถมศึกษาปีที่ : &nbsp;&nbsp;
+    <p>ห้อง : &nbsp;&nbsp;
     <input type="text" class="form-control input-md" placeholder="5/1" required="" v-model="classroom" size="10"></p>
     <p>เลขที่ : &nbsp;&nbsp;
     <input type="number" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="10" min="1"></p>
@@ -63,4 +63,5 @@ export default {
   }
 };
 </script>
+
 

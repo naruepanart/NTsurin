@@ -4,7 +4,7 @@
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
      <td>ชื่อจริง</td>
      <td>นามสกุล</td>
-      <td>ชั้นประถมศึกษาปีที่</td>
+      <td>ห้อง</td>
       <td>เลขที่</td>
        <tr v-for="firstnames in firstname">
          <td>{{firstnames.firstname}}</td> 
@@ -53,5 +53,3 @@ export default {
   } */
 };
 </script>
-
-
