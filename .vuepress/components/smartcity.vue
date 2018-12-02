@@ -11,14 +11,13 @@
     <hr>
     <form @submit.prevent="onSubmit">
     <p>ชื่อจริง</p>
-    <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname" size="20">
-  
+    <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname">
     <p>นามสกุล </p>
-    <input type="text" class="form-control input-md" placeholder="บินทะลุบ้าน" required="" v-model="lastname" size="20">
+    <input type="text" class="form-control input-md" placeholder="บินทะลุบ้าน" required="" v-model="lastname">
     <p>ห้อง </p>
-    <input type="text" class="form-control input-md" placeholder="5/1" required="" v-model="classroom" size="10">
+    <input type="text" class="form-control input-md" placeholder="5/1" required="" v-model="classroom">
     <p>เลขที่ </p>
-    <input type="number" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" size="10" min="1">
+    <input type="number" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" min="1">
     <p>คำตอบ </p>
     <textarea cols="35" rows="20" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br>
     <br>

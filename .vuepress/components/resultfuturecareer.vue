@@ -3,12 +3,12 @@
     <p>คำตอบ อาชีพในอนาคต</p>
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
     <hr>
-       <div v-for="firstnames, i in firstname">
+       <tr v-for="firstnames, i in firstname">
          <p>ชื่อ : {{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
            <button v-on:click="onDelete(firstnames._id,i)">Delete</button></p>
         <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberclassroom}}</p>
         <p>รายละเอียด : <br>{{firstnames.text}}</p>
-      </div>
+      </tr>
   </div> 
 </template>
 
