@@ -2,13 +2,14 @@
   <div>  
     <p>คำตอบ อาชีพในอนาคต</p>
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
-    <hr>
-       <tr v-for="firstnames, i in firstname">
-         <p>ชื่อ : {{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
+     <hr>
+       <div v-for="firstnames, i in firstname">
+         <p>ชื่อ : {{firstnames.titlename}} {{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
            <button v-on:click="onDelete(firstnames._id,i)">Delete</button></p>
         <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberclassroom}}</p>
         <p>รายละเอียด : <br>{{firstnames.text}}</p>
-      </tr>
+        <hr>
+      </div>
   </div> 
 </template>
 
@@ -17,6 +18,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      titlename: "",
       firstname: "",
       lastname: "",
       classroom: "",

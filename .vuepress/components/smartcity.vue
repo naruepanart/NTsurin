@@ -9,17 +9,36 @@
     <p>5.ด้านสุขภาพ</p>
     <p>เช่น ควรจะพัฒนาในด้านการท่องเที่ยว เพราะ...</p>
     <hr>
+    
     <form @submit.prevent="onSubmit">
-    <p>ชื่อจริง</p>
-    <input type="text" class="form-control input-md" placeholder="ด.ช.จิรายุ" required="" v-model="firstname">
+     <p>คำนำหน้านาม</p>
+    <select type="text" v-model="titlename" required="">
+        <option value="ด.ช.">ด.ช.</option>
+        <option value="ด.ญ.">ด.ญ.</option>
+        <option value="นาย">นาย</option>
+        <option value="นางสาว">นางสาว</option>
+    </select>
+    <p>ชื่อ</p>
+    <input type="text" class="form-control input-md" required="" v-model="firstname">
     <p>นามสกุล </p>
-    <input type="text" class="form-control input-md" placeholder="บินทะลุบ้าน" required="" v-model="lastname">
-    <p>ห้อง </p>
-    <input type="text" class="form-control input-md" placeholder="5/1" required="" v-model="classroom">
+    <input type="text" class="form-control input-md" required="" v-model="lastname">
+    <p>ห้อง</p>
+     <select type="text" v-model="classroom" required="">
+        <option value="ป.5/1">ป.5/1</option>
+        <option value="ป.5/2">ป.5/2</option>
+        <option value="ป.5/3">ป.5/3</option>
+        <option value="ป.5/4">ป.5/4</option>
+        <option value="ป.5/5">ป.5/5</option>
+        <option value="ป.5/6">ป.5/6</option>
+        <option value="ป.5/7">ป.5/7</option>
+        <option value="ป.5/8">ป.5/8</option>
+        <option value="ป.5/9">ป.5/9</option>
+        <option value="ป.5/10">ป.5/10</option>
+    </select>
     <p>เลขที่ </p>
-    <input type="number" class="form-control input-md" placeholder="1" required="" v-model="numberclassroom" min="1">
+    <input type="number" class="form-control input-md" required="" v-model="numberclassroom" min="1">
     <p>คำตอบ </p>
-    <textarea cols="35" rows="20" v-model="text" placeholder="ควรจะพัฒนาในด้าน... เพราะ..." required=""></textarea><br>
+    <textarea cols="35" rows="20" v-model="text" required=""></textarea><br>
     <br>
     <input type="submit" value="Post">
     </form>
@@ -33,6 +52,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
+      titlename: '',
       firstname: '',
       lastname: '',
       classroom: '',
@@ -46,12 +66,14 @@ export default {
       axios
         .post(
           "https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/surinsmartcity", {
+            titlename: this.titlename,
             firstname: this.firstname,
             lastname: this.lastname,
             classroom: this.classroom,
             numberclassroom: this.numberclassroom,
             text: this.text,
             
+            null: this.titlename = '',
             null: this.firstname = '',
             null: this.lastname = '',
             null: this.classroom = '',
@@ -75,7 +97,7 @@ form {
   transition: 250ms box-shadow ease-out, 250ms transform ease-out;
   transition: 250ms box-shadow ease-out, 250ms transform ease-out, 250ms -webkit-transform ease-out;
 }
-
+select[type="text"],
 input[type="number"],
 input[type="text"],
 textarea {

@@ -1,18 +1,18 @@
 <template>
   <div> 
- 
+
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
-     <td>ชื่อจริง</td>
+     <td>ชื่อ</td>
      <td>นามสกุล</td>
       <td>ห้อง</td>
       <td>เลขที่</td>
        <tr v-for="firstnames in firstname">
-         <td>{{firstnames.firstname}}</td> 
+         <td>{{firstnames.titlename}} {{firstnames.firstname}}</td> 
          <td>{{firstnames.lastname}}</td>
          <td>{{firstnames.classroom}}</td>
          <td>{{firstnames.numberclassroom}}</td>
       </tr>
-       
+  
   </div> 
 </template>
 
@@ -21,6 +21,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      titlename: "",
       firstname: "",
       lastname: "",
       classroom: "",
