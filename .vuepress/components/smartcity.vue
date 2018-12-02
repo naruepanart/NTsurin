@@ -40,7 +40,7 @@
     <p>คำตอบ </p>
     <textarea cols="35" rows="20" v-model="text" required=""></textarea><br>
     <br>
-    <input type="submit" value="Post">
+    <input type="submit" value="ส่งข้อมูล">
     </form>
     
     </div>
@@ -80,7 +80,7 @@ export default {
             null: this.numberclassroom = '',
             null: this.text = '',
         })
-        alert('ส่งเรียบร้อยแล้ว');
+        alert('ส่งข้อมูลเรียบร้อยแล้ว');
     }
   }
 };
