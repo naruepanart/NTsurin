@@ -30,7 +30,7 @@
         <option value="ป.5/10">ป.5/10</option>
     </select>
     <p>เลขที่ </p>
-    <input type="number" class="form-control input-md" required="" v-model="numberclassroom" min="1">
+    <input type="number" class="form-control input-md" required="" v-model="numberclassroom" min="1" max="99">
     <p>คำตอบ </p>
     <textarea cols="35" rows="20" v-model="text" required=""></textarea><br>
     <br>
