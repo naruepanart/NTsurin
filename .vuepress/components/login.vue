@@ -56,9 +56,6 @@ form {
 input[type="password"],
 input[type="text"],
 textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   border: 1px solid #e0e0e0;
   padding: 0.85em 0.75em 0.75em 0.75em;
   width: calc(100% - 1.25em);

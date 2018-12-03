@@ -7,7 +7,7 @@
       <td>ห้อง</td>
       <td>เลขที่</td>
        <tr v-for="firstnames in firstname">
-         <td>{{firstnames.titlename}} {{firstnames.firstname}}</td> 
+         <td>{{firstnames.titlename}}{{firstnames.firstname}}</td> 
          <td>{{firstnames.lastname}}</td>
          <td>{{firstnames.classroom}}</td>
          <td>{{firstnames.numberclassroom}}</td>
@@ -21,12 +21,12 @@ import axios from "axios";
 export default {
   data() {
     return {
-      titlename: "",
-      firstname: "",
-      lastname: "",
-      classroom: "",
-      numberclassroom: "",
-      text: ""
+      titlename: '',
+      firstname: '',
+      lastname: '',
+      classroom: '',
+      numberclassroom: '',
+      text: ''
     };
   },
   mounted() {
@@ -38,9 +38,7 @@ export default {
         this.firstname = response.data;
         //console.log("Data : ", response.data);
       })
-      .catch(function(error) {
-        //console.log("Error : ", error);
-      });
+     
   }
 
   // Fetches firstname when the component is created.

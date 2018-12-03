@@ -4,7 +4,7 @@
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
      <hr>
        <div v-for="firstnames, i in firstname">
-         <p>ชื่อ : {{firstnames.titlename}} {{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
+         <p>ชื่อ : {{firstnames.titlename}}{{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
            <button v-on:click="onDelete(firstnames._id,i)">Delete</button></p>
         <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberclassroom}}</p>
         <p>รายละเอียด : <br>{{firstnames.text}}</p>
@@ -18,12 +18,12 @@ import axios from "axios";
 export default {
   data() {
     return {
-      titlename: "",
-      firstname: "",
-      lastname: "",
-      classroom: "",
-      numberclassroom: "",
-      text: ""
+      titlename: '',
+      firstname: '',
+      lastname: '',
+      classroom: '',
+      numberclassroom: '',
+      text: ''
     };
   },
   methods: {
@@ -47,20 +47,9 @@ export default {
         this.firstname = response.data;
         //console.log("Data : ", response.data);
       })
-      .catch(function(error) {
-        //console.log("Error : ", error);
-      });
+      
   }
 
-  // Fetches firstname when the component is created.
-  /*  mounted() {
-    fetch(`https://apiwarpth-zcrbcgqtob.now.sh/firstname`)
-      .then(response => response.json())
-      .then(firstname => {
-        this.firstname = firstname;
-        // console.log(firstname);
-      });
-  } */
 };
 </script>
 
@@ -71,8 +60,7 @@ button{
   border-radius: 0.25em;
   border: 1px solid red;
   color: #ffffff;
-  font-size: 0.8em;
-  padding: 0.6em;
-  width: 20%;
+  font-size: 0.7em;
+  padding: 0.5em;
 }
 </style>

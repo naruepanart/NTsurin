@@ -7,6 +7,7 @@
    <form @submit.prevent="onSubmit">
      <p>คำนำหน้านาม</p>
     <select type="text" v-model="titlename" required="">
+        <option value="">- กรุณาเลือกคำนำหน้า -</option>
         <option value="ด.ช.">ด.ช.</option>
         <option value="ด.ญ.">ด.ญ.</option>
         <option value="นาย">นาย</option>
@@ -18,6 +19,7 @@
     <input type="text" class="form-control input-md" required="" v-model="lastname">
     <p>ห้อง</p>
      <select type="text" v-model="classroom" required="">
+        <option value="">- กรุณาเลือกห้อง -</option>
         <option value="ป.5/1">ป.5/1</option>
         <option value="ป.5/2">ป.5/2</option>
         <option value="ป.5/3">ป.5/3</option>
@@ -96,13 +98,9 @@ select[type="text"],
 input[type="number"],
 input[type="text"],
 textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   border: 1px solid #e0e0e0;
   padding: 0.85em 0.75em 0.75em 0.75em;
   width: calc(100% - 1.25em);
-  transition: 125ms border-color ease-out;
 }
 
 
