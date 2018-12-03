@@ -108,19 +108,21 @@ textarea {
   width: calc(100% - 1.25em);
 }
 
-
 input[type="submit"] {
-  background-color: #ffffff;
+  background-color: #0987ee;
   border-radius: 0.25em;
-  border: 1px solid #1277ca;
-  color: #1277ca;
+  border: 1px solid #0987ee;
+  color: #ffffff;
   font-size: 1.0em;
   letter-spacing: 0.025em;
   margin-top: 0.25em;
   margin-bottom: 2em;
   padding: 1em;
-  transition: 125ms background-color ease-out, 125ms border-color ease-out;
   width: 100%;
+}
+
+select{
+  background: white;
 }
 
 </style>
