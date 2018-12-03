@@ -3,10 +3,10 @@
        
         <h1>สำหรับคุณครู</h1>
         <form @submit.prevent="login">
-        <p>ชื่อผู้ใช้ : &nbsp;&nbsp;
-        <input type="text" class="form-control input-md" required="" name="username" v-model="input.username" placeholder="ชื่อผู้ใช้" /></p>
-        <p>รหัสผ่าน : &nbsp;&nbsp;
-        <input type="password" class="form-control input-md" required="" name="password" v-model="input.password" placeholder="รหัสผ่าน" /></p>
+        <p>ชื่อผู้ใช้ &nbsp;&nbsp;
+        <input type="text" class="form-control input-md" required="" name="username" v-model="input.username"/></p>
+        <p>รหัสผ่าน &nbsp;&nbsp;
+        <input type="password" class="form-control input-md" required="" name="password" v-model="input.password"/></p>
         <input type="submit" value="เข้าสู่ระบบ">
         </form>
     
@@ -64,10 +64,10 @@ textarea {
 
 
 input[type="submit"] {
-  background-color: #ffffff;
+  background-color: #0987ee;
   border-radius: 0.25em;
   border: 1px solid #0987ee;
-  color: #0987ee;
+  color: #ffffff;
   font-size: 1.0em;
   letter-spacing: 0.025em;
   margin-top: 0.25em;
