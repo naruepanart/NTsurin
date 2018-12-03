@@ -64,10 +64,10 @@ textarea {
 
 
 input[type="submit"] {
-  background-color: #2491eb;
+  background-color: #ffffff;
   border-radius: 0.25em;
   border: 1px solid #1277ca;
-  color: #ffffff;
+  color: #1277ca;
   font-size: 1.0em;
   letter-spacing: 0.025em;
   margin-top: 0.25em;
@@ -77,7 +77,7 @@ input[type="submit"] {
   width: 100%;
 }
 input[type="submit"]:focus {
-  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #2491eb;
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 4px #2491eb;
 }
 
 </style>
