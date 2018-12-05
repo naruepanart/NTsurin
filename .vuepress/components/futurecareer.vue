@@ -12,7 +12,7 @@
         <option value="นาย">นาย</option>
         <option value="นางสาว">นางสาว</option>
       </select>
-      <p>ชื่อ</p>
+      <p>ชื่อ (ไม่ต้องใส่ คำนำหน้านาม)</p>
       <input type="text" class="form-control input-md" required v-model="firstname">
       <p>นามสกุล</p>
       <input type="text" class="form-control input-md" required v-model="lastname">
