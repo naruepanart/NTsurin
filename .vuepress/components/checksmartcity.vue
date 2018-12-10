@@ -9,7 +9,7 @@
       <td>{{total.titlename}}{{total.firstname}}</td>
       <td>{{total.lastname}}</td>
       <td>{{total.classroom}}</td>
-      <td>{{total.numberinclassroom}}</td>
+      <td>{{total.numberclassroom}}</td>
     </tr>
   </div>
 </template>
