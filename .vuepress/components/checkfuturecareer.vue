@@ -1,17 +1,15 @@
 <template>
   <div>
-    <p>จำนวนคนส่ง : {{firstnames.length}} คน</p>
-   
+    <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <td>ชื่อ</td>
     <td>นามสกุล</td>
     <td>ห้อง</td>
     <td>เลขที่</td>
-    <tr v-for="firstname,i in firstnames">
-    
-      <td>{{firstname.titlename}}{{firstname.firstname}}</td>
-      <td>{{firstname.lastname}}</td>
-      <td>{{firstname.classroom}}</td>
-      <td>{{firstname.numberinclassroom}}</td>
+    <tr v-for="total,i in fetchAPI">
+      <td>{{total.titlename}}{{total.firstname}}</td>
+      <td>{{total.lastname}}</td>
+      <td>{{total.classroom}}</td>
+      <td>{{total.numberclassroom}}</td>
     </tr>
   </div>
 </template>
@@ -21,11 +19,8 @@ import axios from "axios";
 export default {
   data() {
     return {
-      titlename: "",
-      firstnames: "",
-      lastname: "",
-      classroom: "",
-      numberinclassroom: ""
+      fetchAPI: ""
+   
     };
   },
   mounted() {
@@ -34,18 +29,18 @@ export default {
         `https://newapi-ntsurin.herokuapp.com/futurecareer/`
       )
       .then(response => {
-        this.firstnames = response.data;
+        this.fetchAPI = response.data;
         //console.log("Data : ", response.data);
       });
   }
 
-  // Fetches firstnames when the component is created.
+  // Fetches fetchAPI when the component is created.
   /*  mounted() {
-    fetch(`https://apiwarpth-zcrbcgqtob.now.sh/firstnames`)
+    fetch(`https://apiwarpth-zcrbcgqtob.now.sh/fetchAPI`)
       .then(response => response.json())
-      .then(firstnames => {
-        this.firstnames = firstnames;
-        // console.log(firstnames);
+      .then(fetchAPI => {
+        this.fetchAPI = fetchAPI;
+        // console.log(fetchAPI);
       });
   } */
 };
