@@ -31,12 +31,14 @@ export default {
   mounted() {
     axios
       .get(
-        `https://newapi-ntsurin.herokuapp.com/surinsmartcity/`
+        `https://newapi-ntsurin.herokuapp.com/mailfuture/`
       )
       .then(response => {
         this.firstnames = response.data;
         //console.log("Data : ", response.data);
       });
+ 
+      
   }
 
   // Fetches firstnames when the component is created.

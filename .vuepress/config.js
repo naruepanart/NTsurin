@@ -7,6 +7,7 @@ module.exports = {
     sidebar: [
       '/',
       '/smartcity.md',
+      '/futurecareer.md',
     ],
     nav: [
       { text: 'เข้าสู่ระบบ', link: '/login' }

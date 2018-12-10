@@ -37,7 +37,7 @@ export default {
     onDelete(id, i) {
       axios
         .delete(
-          `https://newapi-ntsurin.herokuapp.com/futurecareer/` +
+          `https://newapi-ntsurin.herokuapp.com/mailfuture/` +
             id,
           {
             method: "DELETE"
@@ -52,7 +52,7 @@ export default {
   mounted() {
     axios
       .get(
-        `https://newapi-ntsurin.herokuapp.com/futurecareer/`
+        `https://newapi-ntsurin.herokuapp.com/mailfuture/`
       )
       .then(response => {
         this.firstname = response.data;

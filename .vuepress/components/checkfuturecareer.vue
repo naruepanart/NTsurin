@@ -1,11 +1,13 @@
 <template>
   <div>
     <p>จำนวนคนส่ง : {{firstnames.length}} คน</p>
+    <td>ลำดับ</td>
     <td>ชื่อ</td>
     <td>นามสกุล</td>
     <td>ห้อง</td>
     <td>เลขที่</td>
-    <tr v-for="firstname in firstnames">
+    <tr v-for="firstname,i in firstnames">
+      <td>{{i}}</td>
       <td>{{firstname.titlename}}{{firstname.firstname}}</td>
       <td>{{firstname.lastname}}</td>
       <td>{{firstname.classroom}}</td>
@@ -23,14 +25,13 @@ export default {
       firstnames: "",
       lastname: "",
       classroom: "",
-      numberclassroom: "",
-      text: ""
+      numberclassroom: ""
     };
   },
   mounted() {
     axios
       .get(
-        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/futurecareer/`
+        `https://newapi-ntsurin.herokuapp.com/futurecareer/`
       )
       .then(response => {
         this.firstnames = response.data;

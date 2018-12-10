@@ -9,49 +9,6 @@
     <p>5.ด้านสุขภาพ</p>
     <p>เช่น ควรจะพัฒนาในด้านการท่องเที่ยว เพราะ...</p>
     <hr>
-
-    <form @submit.prevent="onSubmit">
-      <p>คำนำหน้านาม</p>
-      <select type="text" v-model="titlename" required>
-        <option value>- กรุณาเลือกคำนำหน้า -</option>
-        <option value="ด.ช.">ด.ช.</option>
-        <option value="ด.ญ.">ด.ญ.</option>
-        <option value="นาย">นาย</option>
-        <option value="นางสาว">นางสาว</option>
-      </select>
-      <p>ชื่อ (ไม่ต้องใส่ คำนำหน้านาม)</p>
-      <input type="text" class="form-control input-md" required v-model="firstname">
-      <p>นามสกุล</p>
-      <input type="text" class="form-control input-md" required v-model="lastname">
-      <p>ห้อง</p>
-      <select type="text" v-model="classroom" required>
-        <option value>- กรุณาเลือกห้อง -</option>
-        <option value="ป.5/1">ป.5/1</option>
-        <option value="ป.5/2">ป.5/2</option>
-        <option value="ป.5/3">ป.5/3</option>
-        <option value="ป.5/4">ป.5/4</option>
-        <option value="ป.5/5">ป.5/5</option>
-        <option value="ป.5/6">ป.5/6</option>
-        <option value="ป.5/7">ป.5/7</option>
-        <option value="ป.5/8">ป.5/8</option>
-        <option value="ป.5/9">ป.5/9</option>
-        <option value="ป.5/10">ป.5/10</option>
-      </select>
-      <p>เลขที่</p>
-      <input
-        type="number"
-        class="form-control input-md"
-        required
-        v-model="numberclassroom"
-        min="1"
-        max="99"
-      >
-      <p>คำตอบ</p>
-      <textarea cols="35" rows="20" v-model="text" required></textarea>
-      <br>
-      <br>
-      <input type="submit" value="ส่งข้อมูล">
-    </form>
   </div>
 </template>
 
@@ -73,7 +30,7 @@ export default {
     onSubmit() {
       //console.log(this.firstname, this.lastname);
       axios.post(
-        "https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/surinsmartcity",
+        "https://newapi-ntsurin.herokuapp.com/surinsmartcity",
         {
           titlename: this.titlename,
           firstname: this.firstname,

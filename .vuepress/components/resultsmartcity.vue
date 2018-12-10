@@ -37,7 +37,7 @@ export default {
     onDelete(id, i) {
       axios
         .delete(
-          `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/surinsmartcity/` +
+          `https://newapi-ntsurin.herokuapp.com/surinsmartcity/` +
             id,
           {
             method: "DELETE"
@@ -52,7 +52,7 @@ export default {
   mounted() {
     axios
       .get(
-        `https://api-surinsmartcity.herokuapp.com/nongtongsurawittayakom/surinsmartcity/`
+        `https://newapi-ntsurin.herokuapp.com/surinsmartcity/`
       )
       .then(response => {
         this.firstname = response.data;

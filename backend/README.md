@@ -1,6 +1,8 @@
 ---
-title : All Result 
+title : สำหรับคุณครู
 ---
+
+[คำตอบ เขียนจดหมายถึงตัวเองในอนาคต](/backend/mailfuture.md)
 
 [คำตอบ อาชีพในอนาคต](/backend/futurecareer.md)
 
