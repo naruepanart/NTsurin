@@ -1,13 +1,13 @@
 <template>
   <div>
     <p>จำนวนคนส่ง : {{firstnames.length}} คน</p>
-    <td>ลำดับ</td>
+
     <td>ชื่อ</td>
     <td>นามสกุล</td>
     <td>ห้อง</td>
     <td>เลขที่</td>
     <tr v-for="firstname,i in firstnames">
-      <td>{{i}}</td>
+ 
       <td>{{firstname.titlename}}{{firstname.firstname}}</td>
       <td>{{firstname.lastname}}</td>
       <td>{{firstname.classroom}}</td>
