@@ -11,7 +11,7 @@
       <td>{{firstname.titlename}}{{firstname.firstname}}</td>
       <td>{{firstname.lastname}}</td>
       <td>{{firstname.classroom}}</td>
-      <td>{{firstname.numberclassroom}}</td>
+      <td>{{firstname.numberinclassroom}}</td>
     </tr>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
       firstnames: "",
       lastname: "",
       classroom: "",
-      numberclassroom: ""
+      numberinclassroom: ""
     };
   },
   mounted() {

@@ -33,7 +33,7 @@
         type="number"
         class="form-control input-md"
         required
-        v-model="numberclassroom"
+        v-model="numberinclassroom"
         min="1"
         max="99"
       >
@@ -56,7 +56,7 @@ export default {
       firstname: "",
       lastname: "",
       classroom: "",
-      numberclassroom: "",
+      numberinclassroom: "",
       text: ""
     };
   },
@@ -70,14 +70,14 @@ export default {
           firstname: this.firstname,
           lastname: this.lastname,
           classroom: this.classroom,
-          numberclassroom: this.numberclassroom,
+          numberinclassroom: this.numberinclassroom,
           text: this.text,
 
           null: (this.titlename = ""),
           null: (this.firstname = ""),
           null: (this.lastname = ""),
           null: (this.classroom = ""),
-          null: (this.numberclassroom = ""),
+          null: (this.numberinclassroom = ""),
           null: (this.text = "")
         }
       );

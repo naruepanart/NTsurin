@@ -10,7 +10,7 @@
           v-on:click="onDelete(firstnames._id,i)"
         >Delete</button>
       </p>
-      <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberclassroom}}</p>
+      <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberinclassroom}}</p>
       <p>รายละเอียด :
         <br>
         {{firstnames.text}}
@@ -29,7 +29,7 @@ export default {
       firstname: "",
       lastname: "",
       classroom: "",
-      numberclassroom: "",
+      numberinclassroom: "",
       text: ""
     };
   },
