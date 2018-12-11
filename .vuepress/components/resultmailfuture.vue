@@ -13,7 +13,7 @@
       <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberinclassroom}}</p>
       <p>รายละเอียด :
         <br>
-        {{firstnames.text}}
+        <textarea rows="20">{{firstnames.text}}</textarea>
       </p>
       <hr>
     </div>
@@ -71,5 +71,11 @@ button {
   color: #ffffff;
   font-size: 0.7em;
   padding: 0.5em;
+}
+textarea {
+  border: 1px solid #e0e0e0;
+  padding: 0.85em 0.75em 0.75em 0.75em;
+  width: calc(100% - 1.25em);
+  resize: none;
 }
 </style>
