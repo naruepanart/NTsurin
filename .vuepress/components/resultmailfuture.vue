@@ -55,7 +55,7 @@ export default {
         `https://newapi-ntsurin.herokuapp.com/mailfuture/`
       )
       .then(response => {
-        this.firstname = response.data;
+        this.firstname = response.data.reverse();
         //console.log("Data : ", response.data);
       });
   }
