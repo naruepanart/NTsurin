@@ -37,7 +37,7 @@
         min="1"
         max="99"
       >
-      <p>คำตอบ</p>
+      <p>คำตอบ (ไม่มีผิด ไม่มีถูก)</p>
       <textarea rows="20" v-model="text" required></textarea>
       <br>
       <br>
