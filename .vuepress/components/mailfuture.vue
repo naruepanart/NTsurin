@@ -38,7 +38,7 @@
         max="99"
       >
       <p>คำตอบ (ไม่มีผิด ไม่มีถูก)</p>
-      <textarea rows="20" v-model="text" required></textarea>
+      <textarea rows="15" v-model="text" required></textarea>
       <br>
       <br>
       <input type="submit" value="ส่งข้อมูล">

@@ -13,7 +13,7 @@
       <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberinclassroom}}</p>
       <p>รายละเอียด :
         <br>
-        <textarea rows="20">{{firstnames.text}}</textarea>
+        <textarea rows="15">{{firstnames.text}}</textarea>
       </p>
       <hr>
     </div>
