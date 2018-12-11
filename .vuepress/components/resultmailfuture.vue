@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>คำตอบ อาชีพในอนาคต</p>
+    <p>คำตอบ เขียนจดหมายถึงตัวเองในอนาคต</p>
     <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
     <hr>
     <div v-for="firstnames, i in firstname">

@@ -38,7 +38,7 @@
         max="99"
       >
       <p>คำตอบ</p>
-      <textarea cols="35" rows="20" v-model="text" required></textarea>
+      <textarea rows="20" v-model="text" required></textarea>
       <br>
       <br>
       <input type="submit" value="ส่งข้อมูล">
@@ -107,6 +107,7 @@ textarea {
   border: 1px solid #e0e0e0;
   padding: 0.85em 0.75em 0.75em 0.75em;
   width: calc(100% - 1.25em);
+  resize: none;
 }
 
 input[type="submit"] {
