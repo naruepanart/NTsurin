@@ -25,7 +25,7 @@ export default {
   mounted() {
     axios
       .get(
-        `https://newapi-ntsurin.herokuapp.com/mailfuture/`
+        `https://newapi-ntsurin.herokuapp.com/test/`
       )
       .then(response => {
         this.fetchAPI = response.data.reverse();

@@ -8,4 +8,8 @@ title : สำหรับคุณครู
 
 [คำตอบ สุรินทร์สมาร์ทซิตี้](/backend/smartcity.md)
 
+---
+
+[ทดสอบ](/backend/test.md)
+
 
