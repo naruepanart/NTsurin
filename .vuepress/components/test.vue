@@ -1,6 +1,5 @@
 <template>
   <div>
-    <hr>
     <form @submit.prevent="onSubmit">
       <p>คำนำหน้านาม</p>
       <select type="text" v-model="titlename" required>
