@@ -11,7 +11,7 @@
         รายละเอียด :
         <button class="red" v-on:click="onDelete(total._id,i)">Delete</button>
         -
-        <button class="gray" v-on:click="editResult = total._id">Edit</button>
+        <button class="gray" v-on:click="editResult = total._id">Edit</button>&nbsp;
         <button class="green" v-on:click="UpdateResult(total)">Update</button>
         <br>
       </p>
@@ -105,9 +105,9 @@ td {
   
 }
 .green {
-  background-color: #00ad45;
+  background-color: #05cc47;
   border-radius: 0.25em;
-  border: 1px solid #00ad45;
+  border: 1px solid #05cc47;
   color: #ffffff;
   font-size: 0.8em;
   padding: 0.5em;
