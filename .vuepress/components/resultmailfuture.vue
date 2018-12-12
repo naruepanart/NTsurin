@@ -1,33 +1,33 @@
 <template>
   <div>
     <p>คำตอบ เขียนจดหมายถึงตัวเองในอนาคต</p>
-    <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
+    <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <hr>
-    <div v-for="firstnames, i in firstname">
-      <p>
-        ชื่อ : {{firstnames.titlename}} {{firstnames.firstname}} {{firstnames.lastname}}
-        <button id="red" v-on:click="onDelete(firstnames._id,i)">Delete</button>
+    <div v-for="total, i in fetchAPI">
+      <p>{{total.titlename}} {{total.firstname}} {{total.lastname}} -
+      {{total.classroom}} เลขที่ {{total.numberinclassroom}}
       </p>
-      <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberinclassroom}}</p>
       <p>
         รายละเอียด :
-        <button id="gray" v-on:click="editResult = firstnames._id">Edit</button>
-        <button id="green" v-on:click="UpdateResult(firstnames)">Update</button>
+        <button class="red" v-on:click="onDelete(total._id,i)">Delete</button>
+        -
+        <button class="gray" v-on:click="editResult = total._id">Edit</button>
+        <button class="green" v-on:click="UpdateResult(total)">Update</button>
         <br>
       </p>
-      <div v-if="editResult === firstnames._id">คำนำหน้านาม :
-        <input type="text" v-model="firstnames.titlename">
+      <div v-if="editResult === total._id">คำนำหน้านาม :
+        <input type="text" v-model="total.titlename">
         <br>ชื่อ :
-        <input type="text" v-model="firstnames.firstname">
+        <input type="text" v-model="total.firstname">
         <br>นามสกุล :
-        <input type="text" v-model="firstnames.lastname">
+        <input type="text" v-model="total.lastname">
         <br>ห้อง :
-        <input type="text" v-model="firstnames.classroom">
+        <input type="text" v-model="total.classroom">
         <br>เลขที่ :
-        <input type="number" v-model="firstnames.numberinclassroom">
+        <input type="number" v-model="total.numberinclassroom">
       </div>
       <div v-else>
-        <textarea rows="15">{{firstnames.text}}</textarea>
+        <textarea rows="15">{{total.text}}</textarea>
       </div>
 
       <hr>
@@ -40,7 +40,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      firstname: "",
+      fetchAPI: "",
       editResult: null
     };
   },
@@ -51,15 +51,15 @@ export default {
           method: "DELETE"
         })
         .then(() => {
-          this.firstname.splice(i, 1);
+          this.fetchAPI.splice(i, 1);
           //this.$delete(this.facebook, index)
         });
     },
-    UpdateResult(firstnames) {
+    UpdateResult(total) {
       fetch(
-        `https://newapi-ntsurin.herokuapp.com/mailfuture/` + firstnames._id,
+        `https://newapi-ntsurin.herokuapp.com/mailfuture/` + total._id,
         {
-          body: JSON.stringify(firstnames),
+          body: JSON.stringify(total),
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
@@ -75,7 +75,7 @@ export default {
     axios
       .get(`https://newapi-ntsurin.herokuapp.com/mailfuture/`)
       .then(response => {
-        this.firstname = response.data;
+        this.fetchAPI = response.data;
         //console.log("Data : ", response.data);
       });
   }
@@ -84,7 +84,10 @@ export default {
 
 
 <style scoped>
-#red {
+td {
+  border: none;
+}
+.red {
   background-color: #ff0000;
   border-radius: 0.25em;
   border: 1px solid #ff0000;
@@ -92,18 +95,19 @@ export default {
   font-size: 0.8em;
   padding: 0.5em;
 }
-#gray {
-  background-color: #7e7e7e;
+.gray {
+  background-color: #585a5c;
   border-radius: 0.25em;
-  border: 1px solid #7e7e7e;
+  border: 1px solid #585a5c;
   color: #ffffff;
   font-size: 0.8em;
   padding: 0.5em;
+  
 }
-#green {
-  background-color: #2baf2b;
+.green {
+  background-color: #00ad45;
   border-radius: 0.25em;
-  border: 1px solid #2baf2b;
+  border: 1px solid #00ad45;
   color: #ffffff;
   font-size: 0.8em;
   padding: 0.5em;

@@ -1,19 +1,19 @@
 <template>
   <div>
     <p>คำตอบ สมาร์ทซิตี้</p>
-    <p>จำนวนคนส่ง : {{firstname.length}} คน</p>
+    <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <hr>
-    <div v-for="firstnames, i in firstname">
+    <div v-for="total, i in fetchAPI">
       <p>
-        ชื่อ : {{firstnames.titlename}}{{firstnames.firstname}} {{firstnames.lastname}}&nbsp;
+        ชื่อ : {{total.titlename}}{{total.firstname}} {{total.lastname}}&nbsp;
         <button
-          v-on:click="onDelete(firstnames._id,i)"
+          v-on:click="onDelete(total._id,i)"
         >Delete</button>
       </p>
-      <p>ห้อง : {{firstnames.classroom}} เลขที่ : {{firstnames.numberinclassroom}}</p>
+      <p>ห้อง : {{total.classroom}} เลขที่ : {{total.numberclassroom}}</p>
       <p>รายละเอียด :
         <br>
-        {{firstnames.text}}
+        {{total.text}}
       </p>
       <hr>
     </div>
@@ -25,12 +25,8 @@ import axios from "axios";
 export default {
   data() {
     return {
-      titlename: "",
-      firstname: "",
-      lastname: "",
-      classroom: "",
-      numberinclassroom: "",
-      text: ""
+      fetchAPI: ""
+
     };
   },
   methods: {
@@ -44,7 +40,7 @@ export default {
           }
         )
         .then(() => {
-          this.firstname.splice(i, 1);
+          this.fetchAPI.splice(i, 1);
           //this.$delete(this.facebook, index)
         });
     }
@@ -55,7 +51,7 @@ export default {
         `https://newapi-ntsurin.herokuapp.com/surinsmartcity/`
       )
       .then(response => {
-        this.firstname = response.data;
+        this.fetchAPI = response.data;
         //console.log("Data : ", response.data);
       });
   }
