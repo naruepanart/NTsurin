@@ -9,7 +9,7 @@
       <td>{{total.titlename}}{{total.firstname}}</td>
       <td>{{total.lastname}}</td>
       <td>{{total.classroom}}</td>
-      <td>{{total.numberclassroom}}</td>
+      <td>{{total.numberinclassroom}}</td>
     </tr>
   </div>
 </template>
@@ -20,14 +20,11 @@ export default {
   data() {
     return {
       fetchAPI: ""
-
     };
   },
   mounted() {
     axios
-      .get(
-        `https://newapi-ntsurin.herokuapp.com/surinsmartcity/`
-      )
+      .get(`https://newapi-ntsurin.herokuapp.com/futurecareernew/`)
       .then(response => {
         this.fetchAPI = response.data;
         //console.log("Data : ", response.data);

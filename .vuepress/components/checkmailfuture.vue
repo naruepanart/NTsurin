@@ -24,15 +24,14 @@ export default {
   },
   mounted() {
     axios
-      .get(
-        `https://newapi-ntsurin.herokuapp.com/mailfuture/`
-      )
+      .get(`https://newapi-ntsurin.herokuapp.com/mailfuture/`)
       .then(response => {
         this.fetchAPI = response.data;
         //console.log("Data : ", response.data);
+      })
+      .catch(function(error) {
+        console.log(error);
       });
- 
-      
   }
 
   // Fetches fetchAPI when the component is created.

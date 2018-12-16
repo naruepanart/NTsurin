@@ -31,6 +31,9 @@ export default {
       .then(response => {
         this.fetchAPI = response.data;
         //console.log("Data : ", response.data);
+      })
+      .catch(function(error) {
+        console.log(error);
       });
   }
 

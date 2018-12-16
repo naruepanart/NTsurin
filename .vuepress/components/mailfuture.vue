@@ -11,9 +11,9 @@
         <option value="นางสาว">นางสาว</option>
       </select>
       <p>ชื่อ (ไม่ต้องใส่ คำนำหน้านาม)</p>
-      <input type="text" class="form-control input-md" required v-model="firstname">
+      <input type="text" class="form-control input-md" required v-model="firstname" placeholder="กรุณากรอกชื่อจริง" >
       <p>นามสกุล</p>
-      <input type="text" class="form-control input-md" required v-model="lastname">
+      <input type="text" class="form-control input-md" required v-model="lastname" placeholder="กรุณากรอกนามสกุล">
       <p>ห้อง</p>
       <select type="text" v-model="classroom" required>
         <option value>- กรุณาเลือกห้อง -</option>
@@ -36,9 +36,10 @@
         v-model="numberinclassroom"
         min="1"
         max="99"
+        placeholder="กรุณากรอกเลขที่"
       >
-      <p>คำตอบ (ไม่มีผิด ไม่มีถูก)</p>
-      <textarea rows="15" v-model="text" required></textarea>
+      <p>คำตอบ</p>
+      <textarea rows="15" v-model="text" required placeholder="กรุณากรอกคำตอบ"></textarea>
       <br>
       <br>
       <input type="submit" value="ส่งข้อมูล">
@@ -62,7 +63,6 @@ export default {
   },
   methods: {
     onSubmit() {
-      //console.log(this.firstname, this.lastname);
       axios.post(
         "https://newapi-ntsurin.herokuapp.com/mailfuture",
         {
@@ -89,25 +89,16 @@ export default {
 </script>
 
 <style scoped>
-form {
-  background-color: #ffffff;
-  display: block;
-  max-width: 90vw;
-  margin: 0 auto;
-  transition: 250ms box-shadow ease-out, 250ms -webkit-transform ease-out;
-  transition: 250ms box-shadow ease-out, 250ms transform ease-out;
-  transition: 250ms box-shadow ease-out, 250ms transform ease-out,
-    250ms -webkit-transform ease-out;
-}
-
-select[type="text"],
 input[type="number"],
 input[type="text"],
+select,
 textarea {
   border: 1px solid #e0e0e0;
   padding: 0.85em 0.75em 0.75em 0.75em;
-  width: calc(100% - 1.25em);
+  width: 100%;
+  box-sizing: border-box;
   resize: none;
+  background: white;
 }
 
 input[type="submit"] {
@@ -117,13 +108,7 @@ input[type="submit"] {
   color: #ffffff;
   font-size: 1em;
   letter-spacing: 0.025em;
-  margin-top: 0.25em;
-  margin-bottom: 2em;
-  padding: 1em;
+  padding: 0.85em 0.75em 0.75em 0.75em;
   width: 100%;
-}
-
-select {
-  background: white;
 }
 </style>

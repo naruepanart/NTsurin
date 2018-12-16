@@ -55,24 +55,15 @@ export default {
 
 
 <style scoped>
-form {
-  background-color: #ffffff;
-  display: block;
-  max-width: 90vw;
-  margin: 0 auto;
-  transition: 250ms box-shadow ease-out, 250ms -webkit-transform ease-out;
-  transition: 250ms box-shadow ease-out, 250ms transform ease-out;
-  transition: 250ms box-shadow ease-out, 250ms transform ease-out,
-    250ms -webkit-transform ease-out;
-}
-
 input[type="password"],
 input[type="text"],
-textarea {
+select,textarea {
   border: 1px solid #e0e0e0;
   padding: 0.85em 0.75em 0.75em 0.75em;
-  width: calc(100% - 1.25em);
-  transition: 125ms border-color ease-out;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  background: white;
 }
 
 input[type="submit"] {
@@ -82,12 +73,7 @@ input[type="submit"] {
   color: #ffffff;
   font-size: 1em;
   letter-spacing: 0.025em;
-  margin-top: 0.25em;
-  margin-bottom: 2em;
-  padding: 1em;
+  padding: 0.85em 0.75em 0.75em 0.75em;
   width: 100%;
-}
-input[type="submit"]:focus {
-  box-shadow: 0 0 0 3px #ffffff, 0 0 0 4px #0987ee;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>คำตอบ เขียนจดหมายถึงตัวเองในอนาคต</p>
+    <p>คำตอบ อาชีพใหม่ในอนาคต</p>
     <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <hr>
     <div v-for="total, i in fetchAPI">
@@ -25,7 +25,9 @@
         <input type="number" v-model="total.numberinclassroom">
       </div>
       <div v-else>
-        <textarea rows="15">{{total.text}}</textarea>
+        <p>อาชีพเก่า : {{total.oldjob}}</p>
+        <p>อาชีพใหม่ : {{total.newjob}}</p>
+        <p>เงินเดือนที่ต้องการ / ต่อเดือน : {{total.salary}}</p>
       </div>
       <hr>
     </div>
@@ -44,7 +46,7 @@ export default {
   methods: {
     onDelete(id, i) {
       axios
-        .delete(`https://newapi-ntsurin.herokuapp.com/mailfuture/` + id, {
+        .delete(`https://newapi-ntsurin.herokuapp.com/futurecareernew/` + id, {
           method: "DELETE"
         })
         .then(() => {
@@ -54,7 +56,7 @@ export default {
     },
     UpdateResult(total) {
       fetch(
-        `https://newapi-ntsurin.herokuapp.com/mailfuture/` + total._id,
+        `https://newapi-ntsurin.herokuapp.com/futurecareernew/` + total._id,
         {
           body: JSON.stringify(total),
           method: "PUT",
@@ -70,7 +72,7 @@ export default {
   },
   mounted() {
     axios
-      .get(`https://newapi-ntsurin.herokuapp.com/mailfuture/`)
+      .get(`https://newapi-ntsurin.herokuapp.com/futurecareernew/`)
       .then(response => {
         this.fetchAPI = response.data;
         //console.log("Data : ", response.data);
