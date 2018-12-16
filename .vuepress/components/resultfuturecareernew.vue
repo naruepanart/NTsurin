@@ -25,7 +25,7 @@
         <input type="number" v-model="total.numberinclassroom">
       </div>
       <div v-else>
-        <p>อาชีพเก่า : {{total.oldjob}}</p>
+        <p>อาชีพเดิม : {{total.oldjob}}</p>
         <p>อาชีพใหม่ : {{total.newjob}}</p>
         <p>เงินเดือนที่ต้องการ / ต่อเดือน : {{total.salary}}</p>
       </div>
