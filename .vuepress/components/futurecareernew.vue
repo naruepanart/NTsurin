@@ -57,7 +57,7 @@
         class="form-control input-md"
         required
         v-model="oldjob"
-        placeholder="เช่น ตำรวจ"
+        placeholder="ตำรวจ"
       >
       <br>
       <p>อาชีพใหม่</p>
@@ -117,16 +117,15 @@ export default {
         newjob: this.newjob,
         salary: this.salary,
 
-        null: (this.titlename = ""),
-        null: (this.firstname = ""),
-        null: (this.lastname = ""),
-        null: (this.classroom = ""),
-        null: (this.numberinclassroom = ""),
-        null: (this.oldjob = ""),
-        null: (this.newjob = ""),
-        null: (this.salary = "")
-      });
-      //this.firstname.push({link: this.link, picture: this.picture})
+        titlename: "",
+        firstname: "",
+        lastname: "",
+        classroom: "",
+        numberinclassroom: "",
+        oldjob: "",
+        newjob: "",
+        salary: "",
+      })
       alert("ส่งข้อมูลเรียบร้อยแล้ว");
     }
   }
