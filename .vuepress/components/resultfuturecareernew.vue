@@ -8,8 +8,8 @@
       {{total.classroom}} เลขที่ {{total.numberinclassroom}}
       </p>
       <p>
-        <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>
-        <button class="green" v-on:click="editResult = total._id">แก้ไข</button>
+        <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>&nbsp;
+        <button class="green" v-on:click="editResult = total._id">แก้ไข</button>&nbsp;
         <button class="blue" v-on:click="UpdateResult(total)">อัพเดท</button>
         <br>
       </p>
