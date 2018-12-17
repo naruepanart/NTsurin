@@ -7,8 +7,8 @@
         <option value>- กรุณาเลือกคำนำหน้า -</option>
         <option value="ด.ช.">ด.ช.</option>
         <option value="ด.ญ.">ด.ญ.</option>
-        <option value="นาย">นาย</option>
-        <option value="นางสาว">นางสาว</option>
+        <!-- <option value="นาย">นาย</option>
+        <option value="นางสาว">นางสาว</option> -->
       </select>
       <p>ชื่อ (ไม่ต้องใส่ คำนำหน้านาม)</p>
       <input
