@@ -2,21 +2,28 @@
   <div>
     <hr>
     <form @submit.prevent="onSubmit">
-      <p>คำนำหน้านาม</p>
-      <select type="text" v-model="titlename" required>
-        <option value>- กรุณาเลือกคำนำหน้า -</option>
+      <h3>ข้อมูลส่วนตัว</h3>
+      คำนำหน้านาม :
+      <label>
+        <input type="radio" name="gender" value="ด.ญ." v-model="titlename" required>ด.ญ.
+      </label> &nbsp;
+      <label>
+        <input type="radio" name="gender" value="ด.ช." v-model="titlename">ด.ช.
+      </label>
+      <!-- <select type="text" v-model="titlename" required>
+        <option value>- เลือกคำนำหน้า -</option>
         <option value="ด.ช.">ด.ช.</option>
         <option value="ด.ญ.">ด.ญ.</option>
         <option value="นาย">นาย</option>
         <option value="นางสาว">นางสาว</option>
-      </select>
-      <p>ชื่อ (ไม่ต้องใส่ คำนำหน้านาม)</p>
-      <input type="text" class="form-control input-md" required v-model="firstname" placeholder="กรุณากรอกชื่อจริง" >
-      <p>นามสกุล</p>
-      <input type="text" class="form-control input-md" required v-model="lastname" placeholder="กรุณากรอกนามสกุล">
-      <p>ห้อง</p>
+      </select> -->
+      <p>ชื่อจริง (ไม่ต้องใส่ คำนำหน้านาม) :</p>
+      <input type="text" class="form-control input-md" required v-model="firstname" placeholder="ชื่อจริง" >
+      <p>นามสกุล :</p>
+      <input type="text" class="form-control input-md" required v-model="lastname" placeholder="นามสกุล">
+      <p>ห้อง :</p>
       <select type="text" v-model="classroom" required>
-        <option value>- กรุณาเลือกห้อง -</option>
+        <option value>- เลือกห้อง -</option>
         <option value="ป.5/1">ป.5/1</option>
         <option value="ป.5/2">ป.5/2</option>
         <option value="ป.5/3">ป.5/3</option>
@@ -28,7 +35,7 @@
         <option value="ป.5/9">ป.5/9</option>
         <option value="ป.5/10">ป.5/10</option>
       </select>
-      <p>เลขที่</p>
+      <p>เลขที่ :</p>
       <input
         type="number"
         class="form-control input-md"
@@ -36,10 +43,10 @@
         v-model="numberinclassroom"
         min="1"
         max="99"
-        placeholder="กรุณากรอกเลขที่"
+        placeholder="เลขที่"
       >
-      <p>คำตอบ</p>
-      <textarea rows="15" v-model="text" required placeholder="กรุณากรอกคำตอบ"></textarea>
+      <h3>คำตอบ :</h3>
+      <textarea rows="15" v-model="text" required placeholder="คำตอบ"></textarea>
       <br>
       <br>
       <input type="submit" value="ส่งข้อมูล">

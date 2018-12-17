@@ -3,21 +3,22 @@
     <hr>
     <form @submit.prevent="onSubmit">
       <h3>ข้อมูลส่วนตัว</h3>
-      <p>คำนำหน้านาม</p>
-       <div class="radio-toolbar">
-        <input type="radio" id="female" value="ด.ญ." v-model="titlename">
-        <label for="female">ด.ญ.</label> &nbsp;
-        <input type="radio" id="male" value="ด.ช." v-model="titlename">
-        <label for="male">ด.ช.</label>
-      </div>
+      คำนำหน้านาม :
+      <label>
+        <input type="radio" name="gender" value="ด.ญ." v-model="titlename" required>ด.ญ.
+      </label>
+      <label>
+        <input type="radio" name="gender" value="ด.ช." v-model="titlename">ด.ช.
+      </label>
+
       <!-- <select type="text" v-model="titlename" required>
         <option value>- เลือกคำนำหน้า -</option>
         <option value="ด.ช.">ด.ช.</option>
         <option value="ด.ญ.">ด.ญ.</option>
          <option value="นาย">นาย</option>
         <option value="นางสาว">นางสาว</option>
-      </select> -->
-      <p>ชื่อ (ไม่ต้องใส่ คำนำหน้านาม)</p>
+      </select>-->
+      <p>ชื่อจริง (ไม่ต้องใส่ คำนำหน้านาม) :</p>
       <input
         type="text"
         class="form-control input-md"
@@ -25,7 +26,7 @@
         v-model="firstname"
         placeholder="ชื่อจริง"
       >
-      <p>นามสกุล</p>
+      <p>นามสกุล :</p>
       <input
         type="text"
         class="form-control input-md"
@@ -33,7 +34,7 @@
         v-model="lastname"
         placeholder="นามสกุล"
       >
-      <p>ห้อง</p>
+      <p>ห้อง :</p>
       <select type="text" v-model="classroom" required>
         <option value>- เลือกห้อง -</option>
         <option value="ป.5/1">ป.5/1</option>
@@ -47,7 +48,7 @@
         <option value="ป.5/9">ป.5/9</option>
         <option value="ป.5/10">ป.5/10</option>
       </select>
-      <p>เลขที่</p>
+      <p>เลขที่ :</p>
       <input
         type="number"
         class="form-control input-md"
@@ -57,8 +58,8 @@
         max="99"
         placeholder="เลขที่"
       >
-      <h3>คำตอบ</h3>
-      <p>อาชีพเดิม จากหัวข้ออาชีพในอนาคต (ครั้งที่ผ่านมา)</p>
+      <h3>คำตอบ :</h3>
+      <p>อาชีพเดิม จากหัวข้ออาชีพในอนาคต (ครั้งที่ผ่านมา) :</p>
       <input
         type="text"
         class="form-control input-md"
@@ -67,9 +68,9 @@
         placeholder="ตำรวจ"
       >
       <br>
-      <p>อาชีพใหม่</p>
+      <p>อาชีพใหม่ :</p>
       <textarea rows="10" v-model="newjob" required placeholder="นักบินอวกาศ เพราะ..."></textarea>
-      <p>เงินเดือนที่ต้องการ / ต่อเดือน (เมื่ออายุครบ 30 ปี)</p>
+      <p>เงินเดือนที่ต้องการ / ต่อเดือน (เมื่ออายุครบ 30 ปี) :</p>
       <select type="text" v-model="salary" required>
         <option value>- เลือกเงินเดือนที่ต้องการ -</option>
         <option value="10,000">10,000</option>
@@ -154,7 +155,6 @@ textarea {
 
 input[type="submit"] {
   background-color: #0987ee;
-  border-radius: 0.25em;
   border: 1px solid #0987ee;
   color: #ffffff;
   font-size: 1em;
@@ -162,29 +162,9 @@ input[type="submit"] {
   padding: 0.85em 0.75em 0.75em 0.75em;
   width: 100%;
 }
-
-.radio-toolbar input[type="radio"] {
-  display: none;
-}
-
-.radio-toolbar label {
-  display: inline-block;
-  background-color: #ffffff;
-  border-radius: 0.25em;
-  border: 1px solid #0987ee;
-  padding: 4px 10px;
-  font-size: 15px;
-  font-family: Arial;
-  color: black;
-}
-
-.radio-toolbar label:hover {
-  background-color: #e8eef7;
-}
-
-.radio-toolbar input[type="radio"]:checked + label {
-  background-color: #0987ee;
-  border-color: #0987ee;
-  color: #ffffff;
+input[type="radio"] {
+  height: 12px;
+  width: 25px;
+  transform: scale(1.2);
 }
 </style>

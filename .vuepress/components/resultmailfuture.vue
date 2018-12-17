@@ -4,7 +4,7 @@
     <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <hr>
     <div v-for="total, i in fetchAPI">
-      <p>{{total.titlename}} {{total.firstname}} {{total.lastname}}
+      <p>{{total.titlename}}{{total.firstname}} {{total.lastname}}
       {{total.classroom}} เลขที่ {{total.numberinclassroom}}
       </p>
       <p>
