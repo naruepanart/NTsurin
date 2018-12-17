@@ -23,6 +23,8 @@
         <input type="text" v-model="total.classroom">
         <br>เลขที่ 
         <input type="number" v-model="total.numberinclassroom">
+        <br>อาชีพเดิม 
+        <input type="text" v-model="total.oldjob">
       </div>
       <div v-else>
         <p>อาชีพเดิม : {{total.oldjob}}</p>
