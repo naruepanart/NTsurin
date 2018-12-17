@@ -110,12 +110,16 @@ textarea {
 
 input[type="submit"] {
   background-color: #0987ee;
-  border-radius: 0.25em;
   border: 1px solid #0987ee;
   color: #ffffff;
   font-size: 1em;
   letter-spacing: 0.025em;
   padding: 0.85em 0.75em 0.75em 0.75em;
   width: 100%;
+}
+input[type="radio"] {
+  height: 12px;
+  width: 25px;
+  transform: scale(1.2);
 }
 </style>
