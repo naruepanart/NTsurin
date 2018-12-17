@@ -4,11 +4,11 @@
     <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <hr>
     <div v-for="total, i in fetchAPI">
-      <p>{{total.titlename}} {{total.firstname}} {{total.lastname}}
+      <p>{{total.titlename}}{{total.firstname}} {{total.lastname}}
       {{total.classroom}} เลขที่ {{total.numberinclassroom}}
       </p>
       <p>
-        <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>&nbsp;
+        <!-- <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>&nbsp; -->
         <button class="green" v-on:click="editResult = total._id">แก้ไข</button>&nbsp;
         <button class="blue" v-on:click="UpdateResult(total)">อัพเดท</button>
         <br>
