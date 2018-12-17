@@ -5,10 +5,10 @@
       <h3>ข้อมูลส่วนตัว</h3>
       คำนำหน้านาม :
       <label>
-        <input type="radio" name="gender" value="ด.ญ." v-model="titlename" required>ด.ญ.
+        <input type="radio" id="rdoOption1" value="ด.ญ." v-model="titlename" required>ด.ญ.
       </label> &nbsp;
       <label>
-        <input type="radio" name="gender" value="ด.ช." v-model="titlename">ด.ช.
+        <input type="radio" id="rdoOption2" value="ด.ช." v-model="titlename">ด.ช.
       </label>
       <!-- <select type="text" v-model="titlename" required>
         <option value>- เลือกคำนำหน้า -</option>
