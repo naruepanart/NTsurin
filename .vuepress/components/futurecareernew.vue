@@ -5,10 +5,10 @@
       <h3>ข้อมูลส่วนตัว</h3>
       คำนำหน้านาม :
       <label>
-        <input type="radio" id="rdoOption1" value="ด.ญ." v-model="titlename" required>ด.ญ.
+        <input type="radio" name="titlename" value="ด.ญ." v-model="titlename" required>ด.ญ.
       </label>
       <label>
-        <input type="radio" id="rdoOption2" value="ด.ช." v-model="titlename">ด.ช.
+        <input type="radio" name="titlename" value="ด.ช." v-model="titlename">ด.ช.
       </label>
 
       <!-- <select type="text" v-model="titlename" required>
@@ -21,7 +21,7 @@
       <p>ชื่อจริง (ไม่ต้องใส่ คำนำหน้านาม) :</p>
       <input
         type="text"
-        class="form-control input-md"
+        class="form-control "
         required
         v-model="firstname"
         placeholder="ชื่อจริง"
@@ -29,7 +29,7 @@
       <p>นามสกุล :</p>
       <input
         type="text"
-        class="form-control input-md"
+        class="form-control "
         required
         v-model="lastname"
         placeholder="นามสกุล"
@@ -51,7 +51,7 @@
       <p>เลขที่ :</p>
       <input
         type="number"
-        class="form-control input-md"
+        class="form-control "
         required
         v-model="numberinclassroom"
         min="1"
@@ -62,7 +62,7 @@
       <p>อาชีพเดิม จากหัวข้ออาชีพในอนาคต (ครั้งที่ผ่านมา) :</p>
       <input
         type="text"
-        class="form-control input-md"
+        class="form-control "
         required
         v-model="oldjob"
         placeholder="ตำรวจ"
@@ -92,7 +92,7 @@
 
       <br>
       <br>
-      <input type="submit" value="ส่งข้อมูล">
+      <input type="submit" value="ส่งคำตอบ">
     </form>
   </div>
 </template>

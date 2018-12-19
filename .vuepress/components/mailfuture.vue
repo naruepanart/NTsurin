@@ -2,13 +2,13 @@
   <div>
     <hr>
     <form @submit.prevent="onSubmit">
-      <h3>ข้อมูลส่วนตัว</h3>
-      คำนำหน้านาม :
+      <h3>ข้อมูลส่วนตัว</h3>คำนำหน้านาม :
       <label>
-        <input type="radio" id="rdoOption1" value="ด.ญ." v-model="titlename" required>ด.ญ.
-      </label> &nbsp;
+        <input type="radio" name="titlename" value="ด.ญ." v-model="titlename" required>ด.ญ.
+      </label>
+      &nbsp;
       <label>
-        <input type="radio" id="rdoOption2" value="ด.ช." v-model="titlename">ด.ช.
+        <input type="radio" name="titlename" value="ด.ช." v-model="titlename">ด.ช.
       </label>
       <!-- <select type="text" v-model="titlename" required>
         <option value>- เลือกคำนำหน้า -</option>
@@ -16,11 +16,11 @@
         <option value="ด.ญ.">ด.ญ.</option>
         <option value="นาย">นาย</option>
         <option value="นางสาว">นางสาว</option>
-      </select> -->
+      </select>-->
       <p>ชื่อจริง (ไม่ต้องใส่ คำนำหน้านาม) :</p>
-      <input type="text" class="form-control input-md" required v-model="firstname" placeholder="ชื่อจริง" >
+      <input type="text" class="form-control" required v-model="firstname" placeholder="ชื่อจริง">
       <p>นามสกุล :</p>
-      <input type="text" class="form-control input-md" required v-model="lastname" placeholder="นามสกุล">
+      <input type="text" class="form-control" required v-model="lastname" placeholder="นามสกุล">
       <p>ห้อง :</p>
       <select type="text" v-model="classroom" required>
         <option value>- เลือกห้อง -</option>
@@ -38,7 +38,7 @@
       <p>เลขที่ :</p>
       <input
         type="number"
-        class="form-control input-md"
+        class="form-control"
         required
         v-model="numberinclassroom"
         min="1"
@@ -49,7 +49,7 @@
       <textarea rows="15" v-model="text" required placeholder="คำตอบ"></textarea>
       <br>
       <br>
-      <input type="submit" value="ส่งข้อมูล">
+      <input type="submit" value="ส่งคำตอบ">
     </form>
   </div>
 </template>
@@ -70,24 +70,21 @@ export default {
   },
   methods: {
     onSubmit() {
-      axios.post(
-        "https://newapi-ntsurin.herokuapp.com/mailfuture",
-        {
-          titlename: this.titlename,
-          firstname: this.firstname,
-          lastname: this.lastname,
-          classroom: this.classroom,
-          numberinclassroom: this.numberinclassroom,
-          text: this.text,
+      axios.post("https://newapi-ntsurin.herokuapp.com/mailfuture", {
+        titlename: this.titlename,
+        firstname: this.firstname,
+        lastname: this.lastname,
+        classroom: this.classroom,
+        numberinclassroom: this.numberinclassroom,
+        text: this.text,
 
-          null: (this.titlename = ""),
-          null: (this.firstname = ""),
-          null: (this.lastname = ""),
-          null: (this.classroom = ""),
-          null: (this.numberinclassroom = ""),
-          null: (this.text = "")
-        }
-      );
+        null: (this.titlename = ""),
+        null: (this.firstname = ""),
+        null: (this.lastname = ""),
+        null: (this.classroom = ""),
+        null: (this.numberinclassroom = ""),
+        null: (this.text = "")
+      });
       //this.firstname.push({link: this.link, picture: this.picture})
       alert("ส่งข้อมูลเรียบร้อยแล้ว");
     }

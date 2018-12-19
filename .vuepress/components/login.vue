@@ -6,7 +6,7 @@
         ชื่อผู้ใช้ &nbsp;&nbsp;
         <input
           type="text"
-          class="form-control input-md"
+          class="form-control "
           required
           name="username"
           v-model="input.username"
@@ -16,7 +16,7 @@
         รหัสผ่าน &nbsp;&nbsp;
         <input
           type="password"
-          class="form-control input-md"
+          class="form-control "
           required
           name="password"
           v-model="input.password"

@@ -8,7 +8,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build"
   },
-  "author": "",
+  "author": "Naruepanart Siangsanan",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
