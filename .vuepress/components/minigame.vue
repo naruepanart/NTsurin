@@ -121,7 +121,6 @@ export default {
       lastname: "",
       classroom: "",
       numberinclassroom: "",
-      score: "",
       question: {
         question1: "",
         question2: "",
@@ -139,7 +138,6 @@ export default {
         lastname: this.lastname,
         classroom: this.classroom,
         numberinclassroom: this.numberinclassroom,
-        score: this.score,
         question: this.question,
 
         null: (this.titlename = ""),
