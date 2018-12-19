@@ -2,6 +2,8 @@
 title : สำหรับคุณครู
 ---
 
+[ผลคะแนน เกมส์ใบ้คำจากภาพ](/backend/minigame.md)
+
 [คำตอบ อาชีพใหม่ในอนาคต](/backend/futurecareernew.md)
 
 [คำตอบ เขียนจดหมายถึงตัวเองในอนาคต](/backend/mailfuture.md)
