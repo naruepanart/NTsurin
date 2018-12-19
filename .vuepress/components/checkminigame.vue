@@ -11,13 +11,11 @@
     <td>นามสกุล</td>
     <td>ห้อง</td>
     <td>เลขที่</td>
-    <td>คะแนนที่ได้</td>
     <tr v-for="total,i in fetchAPI">
       <td>{{total.titlename}}{{total.firstname}}</td>
       <td>{{total.lastname}}</td>
       <td>{{total.classroom}}</td>
       <td>{{total.numberinclassroom}}</td>
-      <td>{{total.question.question1}}{{total.question.question2}}{{total.question.question3}}{{total.question.question4}}{{total.question.question5}}</td>
     </tr>
   </div>
 </template>
