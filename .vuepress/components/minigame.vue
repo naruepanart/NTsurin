@@ -105,7 +105,7 @@
 
       <br>
       <br>
-      <input type="submit" value="ส่งข้อมูล">
+      <input type="submit" value="ส่งคำตอบ">
     </form>
   </div>
 </template>
