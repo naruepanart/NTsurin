@@ -51,7 +51,7 @@
         placeholder="เลขที่"
       >
       <h3>ให้นักเรียนตอบคำถามต่อไปนี้ให้ถูกต้อง</h3>
-      <h4>โดย ความหมายในภาพจะสอดคล้องกับคำตอบ</h4>
+      <h4>โดย ความหมายในภาพจะสอดคล้องกับคำตอบ (มีคะแนน)</h4>
       <p>ข้อที่ 1 :</p>
       <img src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-9/374435_130489380471662_623811099_n.jpg?_nc_cat=101&_nc_eui2=AeHi0ad08d8N0q_PjsIcG15fnvOOYSLY0zDkIylpWhmfgY5TjtEKmai28YcuzvFHcz3FCFMFV0kgwtCT1seXK__cER8u1F1PjLf0wyzZu3QtgA&_nc_ht=scontent.fbkk5-6.fna&oh=138eb7d58a937e27ab591dd8650a43d3&oe=5C9068B7">
       <select type="number" v-model="question.question1" required>
