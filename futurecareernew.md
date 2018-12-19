@@ -12,8 +12,7 @@ title: อาชีพใหม่ในอนาคต
 
 ---
 
-[9 อาชีพของคนยุคใหม่ ทำสบายๆ ได้จากที่บ้าน](https://www.admissionpremium.com/business/news/3895) \
-[เด็กติดเกม ไม่มีอนาคต จริงดิ่? มาดูตัวเลขมูลค่าและโอกาสที่เกมจะให้คุณ ถ้าเล่นอย่างฉลาด](https://www.admissionpremium.com/business/news/3391) \
+[อาชีพของคนยุคใหม่ ](https://www.a-chieve.org/information/) \
 [เผย 10 อาชีพที่นักศึกษาจบใหม่ได้เงินเดือนมากที่สุด](https://www.admissionpremium.com/business/news/2829) \
 [อาชีพอะไรจะฮอตและมาแรงใน 10 ปีข้างหน้า](https://www.krungsri.com/bank/th/plearn-plearn/popular-jobs-in-the-next-10-years.html) \
 [10 อาชีพที่จะฮิตในอนาคต และ 10 อาชีพที่จะดับ](http://www.unigang.com/Article/1933)
