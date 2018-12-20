@@ -4,6 +4,9 @@ title : สำหรับคุณครู
 
 # สำหรับคุณครู
 
+
+[รายชื่อลงทะเบียนความเป็นผู้ประกอบการ](/backend/regtechnopreneur.md)
+
 [คะแนน เกมส์ใบ้คำจากภาพ](/backend/minigame.md)
 
 [คำตอบ อาชีพใหม่ในอนาคต](/backend/futurecareernew.md)
@@ -19,7 +22,7 @@ title : สำหรับคุณครู
 
 ทดลองใช้งาน
 
-- [ความเป็นผู้ประกอบการ](/technopreneur.md)
+- [แผนความเป็นผู้ประกอบการ](/technopreneurplan.md)
 
 - [เกมส์ใบ้คำจากภาพ](/newproduct.md)
 
