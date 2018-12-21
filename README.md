@@ -7,6 +7,16 @@ title: หน้าแรก
 - [สามารถดูหัวข้อได้ที่นี่](/technopreneurplan.md) 
 <!-- - [ครั้งที่ 1 ส่งรายชื่อ](/regtechnopreneur.md) -->
 
+::: tip หากติดปัญหาในการหาคำตอบ ให้ติดต่อ
+
+[Facebook : Naruepanart S Siangsanan](https://www.facebook.com/benz.naruepanart) (พี่เบนซ์)
+
+ตัวอย่าง :
+ผมมาจากกลุ่มที่ 99 มีปัญหา...
+
+:::
+
+---
 
 **ปิดรับคำตอบ** - 28/12/2561 
 - อาชีพใหม่ในอนาคต
