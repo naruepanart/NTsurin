@@ -257,6 +257,43 @@
         placeholder="เลขที่"
       >
 
+     <h3>กรรมการ</h3>
+      คำนำหน้านาม :
+      <label>
+        <input type="radio" name="titlename6" value="ด.ญ." v-model="profiles.titlename6" required>ด.ญ.
+      </label>
+      <label>
+        <input type="radio" name="titlename6" value="ด.ช." v-model="profiles.titlename6">ด.ช.
+      </label>
+
+      <p>ชื่อจริง (ไม่ต้องใส่ คำนำหน้านาม) :</p>
+      <input
+        type="text"
+        class="form-control"
+        required
+        v-model="profiles.firstname6"
+        placeholder="ชื่อจริง"
+      >
+      <p>นามสกุล :</p>
+      <input
+        type="text"
+        class="form-control"
+        required
+        v-model="profiles.lastname6"
+        placeholder="นามสกุล"
+      >
+
+      <p>เลขที่ :</p>
+      <input
+        type="number"
+        class="form-control"
+        required
+        v-model="profiles.numberinclassroom6"
+        min="1"
+        max="99"
+        placeholder="เลขที่"
+      >
+
       <br>
       <br>
       <input type="submit" value="ส่งคำตอบ">
