@@ -1,7 +1,8 @@
 <template>
   <div>
     <form @submit.prevent="onSubmit">
-      <p>เลือกธุรกิจ :</p>
+      <b>ขอให้นักเรียนทุกคนตั้งใจทำให้เต็มที่ (มีคะแนน)</b>
+      <p>ธุรกิจ :</p>
       <select type="text" v-model="group" required>
         <option value>- เลือกธุรกิจ -</option>
         <option value="1. ธุรกิจส่งออกมันสําปะหลัง">1.ธุรกิจส่งออกมันสําปะหลัง</option>

@@ -4,10 +4,11 @@
 
     <div v-for="total,i in fetchAPI">
             <tr>
-        <td colspan="4">{{total.group}} ห้อง {{total.classroom}}</td>
+        <td colspan="2">{{total.group}}</td>
+         <td>ห้อง {{total.classroom}}</td>
         <!-- <button v-on:click="onDelete(total._id,i)">ลบ</button> -->
       </tr>
-
+      
       <tr>
         <td>{{total.profiles.titlename1}} {{total.profiles.firstname1}}</td>
         <td>{{total.profiles.lastname1}}</td>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
+    <p>จำนวนคนส่ง : {{fetchAPI.length}} คน - เรียงตามห้อง และ เลขที่</p>
     <td>ชื่อ</td>
     <td>นามสกุล</td>
     <td>ห้อง</td>
