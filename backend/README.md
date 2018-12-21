@@ -21,11 +21,7 @@ title : สำหรับคุณครู
 
 - [ลงทะเบียนความเป็นผู้ประกอบการ](/regtechnopreneur.md)
 
-- [รายชื่อลงทะเบียนความเป็นผู้ประกอบการ](/backend/regtechnopreneur.md)
-
 - [แผนความเป็นผู้ประกอบการ](/technopreneurplan.md)
-
-- [เกมส์ใบ้คำจากภาพ](/newproduct.md)
 
 
 

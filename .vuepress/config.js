@@ -6,8 +6,8 @@ module.exports = {
     search: false,
     sidebar: [
       '/',
-     /*  '/regtechnopreneur.md',
-      '/minigame.md',  */ 
+     /*  '/regtechnopreneur.md',*/
+      '/minigame.md',  
       '/futurecareernew.md',
       '/mailfuture.md',
       '/futurecareer.md',

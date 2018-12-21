@@ -61,15 +61,6 @@ computed: {
   }
 }
 
-  // Fetches fetchAPI when the component is created.
-  /*  mounted() {
-    fetch(`https://apiwarpth-zcrbcgqtob.now.sh/fetchAPI`)
-      .then(response => response.json())
-      .then(fetchAPI => {
-        this.fetchAPI = fetchAPI;
-        // console.log(fetchAPI);
-      });
-  } */
 };
 </script>
 

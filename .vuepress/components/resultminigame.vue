@@ -7,19 +7,19 @@
     <p>จำนวนคนตอบข้อที่ 4 ถูกต้อง : {{totaltrue4}} คน</p>
     <p>จำนวนคนตอบข้อที่ 5 ถูกต้อง : {{totaltrue5}} คน</p>
     <hr>
-    <td>ชื่อ</td>
-    <td>นามสกุล</td>
+  <!--   <td>ลบ</td> -->
+        <td>คะแนน</td>
+    <td>ชื่อ-นามสกุล</td>
     <td>ห้อง</td>
     <td>เลขที่</td>
-    <td>คะแนน</td>
-    <td>คะแนนรวม</td>
+    <!-- <td>คะแนน</td> -->
     <tr v-for="total,i in fetchAPI">
-      <td>{{total.titlename}}{{total.firstname}}</td>
-      <td>{{total.lastname}}</td>
+<!--       <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button> -->
+      <td>{{total.question.question1 + total.question.question2 + total.question.question3 + total.question.question4 + total.question.question5}}</td>
+      <td>{{total.titlename}}{{total.firstname}} {{total.lastname}}</td>
       <td>{{total.classroom}}</td>
       <td>{{total.numberinclassroom}}</td>
-      <td>{{total.question.question1}}{{total.question.question2}}{{total.question.question3}}{{total.question.question4}}{{total.question.question5}}</td>
-    <td>{{total.question.question1 + total.question.question2 + total.question.question3 + total.question.question4 + total.question.question5}}</td>
+      <!-- <td>{{total.question.question1}}{{total.question.question2}}{{total.question.question3}}{{total.question.question4}}{{total.question.question5}}</td> -->
     </tr>
   </div>
 </template>
@@ -40,50 +40,62 @@ export default {
         //console.log("Data : ", response.data);
       })
       .catch(function(error) {
-        console.log(error);
+        //console.log(error);
       });
   },
-computed: {
-  totaltrue1() {
-    return this.fetchAPI.reduce(function (sum, total) {
-      return sum + total.question.question1 
-    }, 0)
+  methods: {
+    onDelete(id, i) {
+      axios
+        .delete(`https://newapi-ntsurin.herokuapp.com/minigame/` + id, {
+          method: "DELETE"
+        })
+        .then(() => {
+          this.fetchAPI.splice(i, 1);
+          //this.$delete(this.facebook, index)
+        });
+    }
   },
-  totaltrue2() {
-    return this.fetchAPI.reduce(function (sum, total) {
-      return sum + total.question.question2 
-    }, 0)
-  },
-  totaltrue3() {
-    return this.fetchAPI.reduce(function (sum, total) {
-      return sum + total.question.question3 
-    }, 0)
-  },
-  totaltrue4() {
-    return this.fetchAPI.reduce(function (sum, total) {
-      return sum + total.question.question4 
-    }, 0)
-  },
-  totaltrue5() {
-    return this.fetchAPI.reduce(function (sum, total) {
-      return sum + total.question.question5 
-    }, 0)
-  }
-}
 
-  // Fetches fetchAPI when the component is created.
-  /*  mounted() {
-    fetch(`https://apiwarpth-zcrbcgqtob.now.sh/fetchAPI`)
-      .then(response => response.json())
-      .then(fetchAPI => {
-        this.fetchAPI = fetchAPI;
-        // console.log(fetchAPI);
-      });
-  } */
+computed: {
+  totaltrue1 () {
+    return this.fetchAPI.reduce(function (sum, total1) {
+      return sum + total1.question.question1 
+    }, 0)
+  },
+  totaltrue2 () {
+    return this.fetchAPI.reduce(function (sum, total2) {
+      return sum + total2.question.question2 
+    }, 0)
+  },
+  totaltrue3 () {
+    return this.fetchAPI.reduce(function (sum, total3) {
+      return sum + total3.question.question3 
+    }, 0)
+  },
+  totaltrue4 () {
+    return this.fetchAPI.reduce(function (sum, total4) {
+      return sum + total4.question.question4 
+    }, 0)
+  },
+  totaltrue5 () {
+    return this.fetchAPI.reduce(function (sum, total5) {
+      return sum + total5.question.question5 
+    }, 0)
+  },
+},
+
+
 };
 </script>
 
 <style scoped>
+.red {
+  background-color: red;
+  border-radius: 0.25em;
+  border: 1px solid red;
+  color: #ffffff;
+  padding: 4px 10px;
+}
 td {
   border: none;
 }
