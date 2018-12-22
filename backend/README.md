@@ -4,7 +4,7 @@ title : สำหรับคุณครู
 
 # สำหรับคุณครู
 
-[คำตอบ ความเป็นผู้ประกอบการ ](/backend/technopreneur.md)
+<!-- [คำตอบ ความเป็นผู้ประกอบการ ](/backend/technopreneur.md) -->
 
 [คะแนน เกมส์ใบ้คำจากภาพ](/backend/minigame.md)
 
@@ -21,13 +21,13 @@ title : สำหรับคุณครู
 
 ทดลองใช้งาน
 
-- [หน้าคำตอบ ความเป็นผู้ประกอบการ ](/backend/technopreneur.md)
+- [คำตอบ ความเป็นผู้ประกอบการ ](/backend/technopreneur.md)
 
-- [หน้าส่งคำตอบ ความเป็นผู้ประกอบการ](/technopreneur.md)
+- [ส่งคำตอบ ความเป็นผู้ประกอบการ](/technopreneur.md)
 
-- [หน้าลงทะเบียน ความเป็นผู้ประกอบการ](/regtechnopreneur.md)
+- [ลงทะเบียน ความเป็นผู้ประกอบการ](/regtechnopreneur.md)
 
-- [หน้าแผนความเป็นผู้ประกอบการ](/technopreneurplan.md)
+- [แผน ความเป็นผู้ประกอบการ](/technopreneurplan.md)
 
 
 
