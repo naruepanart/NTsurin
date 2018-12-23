@@ -57,31 +57,46 @@ export default {
   },
 
 computed: {
-  totaltrue1 () {
-    return this.fetchAPI.reduce(function (sum, total1) {
-      return sum + total1.question.question1 
-    }, 0)
-  },
-  totaltrue2 () {
-    return this.fetchAPI.reduce(function (sum, total2) {
-      return sum + total2.question.question2 
-    }, 0)
-  },
-  totaltrue3 () {
-    return this.fetchAPI.reduce(function (sum, total3) {
-      return sum + total3.question.question3 
-    }, 0)
-  },
-  totaltrue4 () {
-    return this.fetchAPI.reduce(function (sum, total4) {
-      return sum + total4.question.question4 
-    }, 0)
-  },
-  totaltrue5 () {
-    return this.fetchAPI.reduce(function (sum, total5) {
-      return sum + total5.question.question5 
-    }, 0)
-  },
+  totaltrue1: function(){
+  var total = [];
+  Object.entries(this.fetchAPI).forEach(([key, total1]) => {
+      total.push(total1.question.question1) 
+  });
+  return total.reduce(function(total, num) { 
+    return total + num }, 0);
+},
+  totaltrue2: function(){
+  var total = [];
+  Object.entries(this.fetchAPI).forEach(([key, total2]) => {
+      total.push(total2.question.question2) 
+  });
+  return total.reduce(function(total, num) { 
+    return total + num }, 0);
+},
+  totaltrue3: function(){
+  var total = [];
+  Object.entries(this.fetchAPI).forEach(([key, total3]) => {
+      total.push(total3.question.question3) 
+  });
+  return total.reduce(function(total, num) { 
+    return total + num }, 0);
+},
+  totaltrue4: function(){
+  var total = [];
+  Object.entries(this.fetchAPI).forEach(([key, total4]) => {
+      total.push(total4.question.question4) 
+  });
+  return total.reduce(function(total, num) { 
+    return total + num }, 0);
+},
+  totaltrue5: function(){
+  var total = [];
+  Object.entries(this.fetchAPI).forEach(([key, total5]) => {
+      total.push(total5.question.question5) 
+  });
+  return total.reduce(function(total, num) { 
+    return total + num }, 0);
+},
 },
 
 
