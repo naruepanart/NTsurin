@@ -126,7 +126,9 @@
         <option value="6">กรรมการ4</option>
       </select>
 
-      <h3>ประธาน</h3>คำนำหน้านาม :
+      <br><br>
+
+      คำนำหน้านาม :
       <label>
         <input type="radio" name="titlename" value="ด.ญ." v-model="profiles.titlename" required>ด.ญ.
       </label>
