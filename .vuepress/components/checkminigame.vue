@@ -5,11 +5,13 @@
     <td>นามสกุล</td>
     <td>ห้อง</td>
     <td>เลขที่</td>
+    <td>สถานะ</td>
     <tr v-for="total,i in fetchAPI">
       <td>{{total.titlename}}{{total.firstname}}</td>
       <td>{{total.lastname}}</td>
       <td>{{total.classroom}}</td>
       <td>{{total.numberinclassroom}}</td>
+      <td>{{total.status}}</td>
     </tr>
   </div>
 </template>

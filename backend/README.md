@@ -27,7 +27,7 @@ title : สำหรับคุณครู
 
 - [ลงทะเบียน ความเป็นผู้ประกอบการ](/regtechnopreneur.md)
 
-- [แผน ความเป็นผู้ประกอบการ](/technopreneurplan.md)
+- [แผนความเป็นผู้ประกอบการ](https://drive.google.com/file/d/17JFB1fPx0OOr-5iND4vBKwSisbPo4wtj/view?usp=sharing)
 
 
 
