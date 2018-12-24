@@ -2,8 +2,8 @@
   <div>
     <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
     <div v-for="total,i in fetchAPI">
-      <p> กลุ่มที่ {{total.group}} {{total.namebusiness}} <br>
-       {{total.profiles.titlename}} {{total.profiles.firstname}}
+      <b> กลุ่มที่ {{total.group}} {{total.namebusiness}} <br></b>
+      <p> {{total.profiles.titlename}} {{total.profiles.firstname}}
       {{total.profiles.lastname}} 
       เลขที่ {{total.profiles.numberinclassroom}} &nbsp;
      <!--  <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>   -->
@@ -28,7 +28,8 @@
  </td>
  </tr>
         <p>หัวข้อ : {{total.topic}}</p>
-        <textarea rows="8">{{total.text}}</textarea>
+        <textarea rows="6">{{total.text}}</textarea>
+        <hr>
       </td>
     </div>
   </div>
