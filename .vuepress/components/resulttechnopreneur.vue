@@ -6,7 +6,7 @@
        {{total.profiles.titlename}} {{total.profiles.firstname}}
       {{total.profiles.lastname}} 
       เลขที่ {{total.profiles.numberinclassroom}} &nbsp;
-<!--       <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>  -->
+     <!--  <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>   -->
       </p>
       
        <tr> 
@@ -27,7 +27,7 @@
         <button class="blue" v-on:click="UpdateResult(total)">อัพเดท</button>
  </td>
  </tr>
-        <p>คำตอบ</p>
+        <p>คำตอบ {{total.topic}}</p>
         <textarea rows="8">{{total.text}}</textarea>
       </td>
     </div>

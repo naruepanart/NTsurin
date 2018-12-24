@@ -1,9 +1,9 @@
 <template>
   <div>
     <form @submit.prevent="onSubmit">
-      <b>เลขกลุ่มกับเลขธุรกิจ ต้องตรงกัน 
+      <h4>เลขกลุ่มกับเลขธุรกิจ ต้องตรงกัน 
         <a href="https://www.picz.in.th/image/91aPMa">ดูตัวอย่างได้ที่นี่</a>
-      </b>
+      </h4>
       
       <p>กลุ่ม :</p>
       <select type="number" v-model="group" required>
@@ -118,12 +118,23 @@
       <p>ตำแหน่งในทีม :</p>
       <select type="number" v-model="position" required>
         <option value>- เลือกตำแหน่งในทีม -</option>
-        <option value="1">ประธาน</option>
-        <option value="2">รองประธาน</option>
-        <option value="3">กรรมการ1</option>
-        <option value="4">กรรมการ2</option>
-        <option value="5">กรรมการ3</option>
-        <option value="6">กรรมการ4</option>
+        <option value="1">1.ประธาน</option>
+        <option value="2">2.รองประธาน</option>
+        <option value="3">3.กรรมการ1</option>
+        <option value="4">4.กรรมการ2</option>
+        <option value="5">5.กรรมการ3</option>
+        <option value="6">6.กรรมการ4</option>
+      </select>
+
+      <p>ต้องการส่งหัวข้อ :</p>
+      <select type="text" v-model="topic" required>
+        <option value>- ต้องการส่งหัวข้อ -</option>
+        <option value="ประวัติของธุรกิจ (คิดขึ้นมาเอง)">1.ประวัติของธุรกิจ (คิดขึ้นมาเอง)</option>
+        <option value="จุดเด่นของธุรกิจ">2.จุดเด่นของธุรกิจ</option>
+        <option value="จุดด้อยของธุรกิจ">3.จุดด้อยของธุรกิจ</option>
+        <option value="สิ่งที่จะแก้ไข(จากจุดด้อย)">4.สิ่งที่จะแก้ไข(จากจุดด้อย)</option>
+        <option value="โปรโมชั่น">5.โปรโมชั่น</option>
+        <option value="สวัสดิการพนักงาน">6.สวัสดิการพนักงาน</option>
       </select>
 
       <br><br>
@@ -165,6 +176,7 @@
       >
 
       <h3>คำตอบ :</h3>
+      <h4>ส่งหัวข้อ : {{topic}}</h4>
       <textarea rows="15" v-model="text" required placeholder="คำตอบ"></textarea>
 
 
@@ -183,6 +195,7 @@ export default {
     return {
       group: "",
       namebusiness: "",
+      topic: "",
       position: "",
       profiles: {
         titlename: "",
@@ -199,6 +212,7 @@ export default {
       axios.post("https://newapi-ntsurin.herokuapp.com/technopreneur", {
         group: this.group,
         namebusiness: this.namebusiness,
+        topic: this.topic,
         position: this.position,
         profiles: this.profiles,
         text: this.text,
@@ -206,6 +220,7 @@ export default {
 
         null: (this.group = ""),
         null: (this.namebusiness = ""),
+        null: (this.topic = ""),
         null: (this.position = ""),
         null: (this.profiles = ""),
         null: (this.text = ""),
