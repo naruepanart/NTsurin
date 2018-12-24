@@ -27,7 +27,7 @@
         <button class="blue" v-on:click="UpdateResult(total)">อัพเดท</button>
  </td>
  </tr>
-        <p>คำตอบ {{total.topic}}</p>
+        <p>หัวข้อ : {{total.topic}}</p>
         <textarea rows="8">{{total.text}}</textarea>
       </td>
     </div>
