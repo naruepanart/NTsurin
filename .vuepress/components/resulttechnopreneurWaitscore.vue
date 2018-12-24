@@ -1,12 +1,12 @@
 <template>
   <div>
-    <p>จำนวนคนส่ง : {{fetchAPI.length}} คน</p>
+    <p>จำนวนคนที่รอตรวจ : {{fetchAPI.length}} คน</p>
     <div v-for="total,i in fetchAPI">
       <b> กลุ่มที่ {{total.group}} {{total.namebusiness}} <br></b>
       <p> {{total.profiles.titlename}} {{total.profiles.firstname}}
       {{total.profiles.lastname}} 
       เลขที่ {{total.profiles.numberinclassroom}} &nbsp;
-<!--        <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button> -->   
+     <!--  <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>   -->
       </p>
       
        <tr> 
@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     axios
-      .get(`https://newapi-ntsurin.herokuapp.com/technopreneur/`)
+      .get(`https://newapi-ntsurin.herokuapp.com/technopreneur/getallwaitscore`)
       .then(response => {
         this.fetchAPI = response.data;
         //console.log("Data : ", response.data);

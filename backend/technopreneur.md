@@ -2,6 +2,8 @@
 title : คำตอบ ความเป็นผู้ประกอบการ
 ---
 
-[ตรวจคะแนนนักเรียน](/check/technopreneur.md)
+[ดูคะแนนนักเรียนทั้งหมด](/check/technopreneur.md)
+
+[จำนวนรอตรวจทั้งหมด](/backend/technopreneurWaitscore.md)
 
 <resulttechnopreneur></resulttechnopreneur>
