@@ -2,35 +2,38 @@
   <div>
     <p>จำนวนคนที่รอตรวจ : {{fetchAPI.length}} คน</p>
     <div v-for="total,i in fetchAPI">
-      <b> กลุ่มที่ {{total.group}} {{total.namebusiness}} <br></b>
-      <p> {{total.profiles.titlename}} {{total.profiles.firstname}}
-      {{total.profiles.lastname}} 
-      เลขที่ {{total.profiles.numberinclassroom}} &nbsp;
-     <!--  <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>   -->
+      <b>
+        กลุ่มที่ {{total.group}} {{total.namebusiness}}
+        <br>
+      </b>
+      <p>
+        {{total.profiles.titlename}} {{total.profiles.firstname}}
+        {{total.profiles.lastname}}
+        เลขที่ {{total.profiles.numberinclassroom}} &nbsp;
+        <!--  <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button>   -->
       </p>
-      
-       <tr> 
-        <td> คะแนน : {{total.status}}</td>
-           <td v-if="editResult === total._id">
-        <select type="text" v-model="total.status">
-        <option value="ไม่ผ่าน">ไม่ผ่าน</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-      </td>
-      <td>
-         <!-- <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button> &nbsp; -->
-        <button class="green" v-on:click="editResult = total._id">แก้ไข</button> &nbsp;
-        <button class="blue" v-on:click="UpdateResult(total)">อัพเดท</button>
- </td>
- </tr>
-        <p>หัวข้อ : {{total.topic}}</p>
-        <textarea rows="6">{{total.text}}</textarea>
-        <hr>
-      </td>
+
+      <tr>
+        <td>คะแนน : {{total.status}}</td>
+        <td v-if="editResult === total._id">
+          <select type="text" v-model="total.status">
+            <option value="ไม่ผ่าน">ไม่ผ่าน</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </td>
+        <td>
+          <!-- <button class="red" v-on:click="onDelete(total._id,i)">ลบ</button> &nbsp; -->
+          <button class="green" v-on:click="editResult = total._id">แก้ไข</button> &nbsp;
+          <button class="blue" v-on:click="UpdateResult(total)">อัพเดท</button>
+        </td>
+      </tr>
+      <p>หัวข้อ : {{total.topic}}</p>
+      <textarea rows="6">{{total.text}}</textarea>
+      <hr>
     </div>
   </div>
 </template>
@@ -110,7 +113,7 @@ td {
   border: none;
   background-color: white;
 }
-textarea { 
+textarea {
   border: 2px solid #e0e0e0;
   padding: 0.85em 0.75em 0.75em 0.75em;
   width: 100%;

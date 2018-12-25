@@ -6,4 +6,6 @@ title : คำตอบ ความเป็นผู้ประกอบก�
 
 [จำนวนรอตรวจทั้งหมด](/backend/technopreneurWaitscore.md)
 
+---
+
 <resulttechnopreneur></resulttechnopreneur>
