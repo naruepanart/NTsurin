@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="onSubmit">
+<!--     <form @submit.prevent="onSubmit">
       <h4>เลขกลุ่มกับเลขธุรกิจ ต้องตรงกัน 
         <a href="https://www.picz.in.th/image/91aPMa">ดูตัวอย่างได้ที่นี่</a>
       </h4>
@@ -183,7 +183,7 @@
       <br>
       <br>
       <input type="submit" value="ส่งคำตอบ">
-    </form>
+    </form> -->
   </div>
 </template>
 
